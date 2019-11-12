@@ -1,11 +1,7 @@
-#background { 
-  background-image: url(https://wildzebraoutdoorplay.co.uk/uploads/3/4/0/5/3405797/3274027_orig.jpg);
-  width:567px;
-  height:567px;
-} 
-table { 
-    width: 540px; 
-    height: 540px;
-  }
-  
-  #bg-overlay th { border: 1px solid #cb2345;}
+.boardGame div{
+    border: 0.5px solid black;
+    padding: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
