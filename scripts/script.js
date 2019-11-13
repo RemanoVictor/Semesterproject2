@@ -1,6 +1,7 @@
 
-function callApi(){
-fetch ('https://anapioficeandfire.com/api/characters/')
+
+function callApi(id){
+fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/characters/' + id)
 
 .then ((response)=>{
     
@@ -8,16 +9,32 @@ fetch ('https://anapioficeandfire.com/api/characters/')
 })
 
 .then((data)=>{
-    console.log(data);
+    console.log(data)
     
+    
+
 });
 }
 
-// modal
+// Jon snow id=583
 
+// Tyrion lannister 1052
 
-// modal pop up
+// The mountain 1442
 
+// Euron greyjoy 385
+
+// Tormund giantsbane 2024
+
+// arya stark 148
+
+// daenarys targaryen 271
+
+// brienne of tarth 216
+
+// samwell tarly 954
+
+// grey worm 1445
 
 
 
@@ -44,7 +61,7 @@ console.log("you rolled a " + roll+"!");
 rollOutput.innerHTML = " You rolled a " + roll+ " !"; 
 
 if(roll == 6 ){
-    
+
         modal.style.display = "block";
       
     //document.getElementById("alert").innerHTML="The Gods have smiled upon your fortune! Have another go";
@@ -59,3 +76,8 @@ else{
 }
 
 }
+
+
+
+
+  
