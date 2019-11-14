@@ -1,22 +1,25 @@
 
 
 function callApi(name,id){
+
     console.log(name+"     "+id);
+
 fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/characters/' + id)
 
 .then ((response)=>{   
-    //console.log(response);
      return response.json();
      
 })
 
 .then((data)=>{
-    console.log(data);
-    let characterExtraInfo = document.getElementById('cardBody' + name);
-    let character = document.getElementById('cardCulture' + name);
+    //console.log(data);
+    let gender = document.getElementById('cardGender' + name);
+    let aka = document.getElementById('cardAlias'+ name);
 
-    character.innerHTML += data.aliases;
-    characterExtraInfo.innerHTML = data.gender;
+    gender.innerHTML += data.gender;
+    aka.innerHTML = data.aliases[0];
+    
+    
     console.log(data.aliases);
 });
 }
