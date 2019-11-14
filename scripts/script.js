@@ -1,42 +1,23 @@
 
 
-function callApi(id){
+function callApi(name,id){
+    console.log(name+"     "+id);
 fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/characters/' + id)
 
-.then ((response)=>{
-    
+.then ((response)=>{   
      return response.json();
 })
 
 .then((data)=>{
-    console.log(data)
-    
-    
+    console.log(data);
+    let characterExtraInfo = document.getElementById('cardBody' + name);
+    let character = document.getElementById('cardCulture' + name);
 
+    character.innerHTML += data.aliases;
+    characterExtraInfo.innerHTML += data.gender;
+    console.log(data.aliases);
 });
 }
-
-// Jon snow id=583
-
-// Tyrion lannister 1052
-
-// The mountain 1442
-
-// Euron greyjoy 385
-
-// Tormund giantsbane 2024
-
-// arya stark 148
-
-// daenarys targaryen 271
-
-// brienne of tarth 216
-
-// samwell tarly 954
-
-// grey worm 1445
-
-
 
 //const btn = document.getElementById("showModal");
 
@@ -68,7 +49,6 @@ if(roll == 6 ){
 }
 
 else{
-    //document.getElementById("alert").innerHTML="";
     close.onclick = function() {
         modal.style.display = "none";
       };
