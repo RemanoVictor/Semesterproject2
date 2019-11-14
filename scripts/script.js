@@ -25,12 +25,6 @@ fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/ch
 }
 
 
-
-
-
-
-
-
 //dice roll
 
 //const btn = document.getElementById("showModal");
