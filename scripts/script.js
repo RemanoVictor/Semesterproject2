@@ -5,7 +5,9 @@ function callApi(name,id){
 fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/characters/' + id)
 
 .then ((response)=>{   
+    //console.log(response);
      return response.json();
+     
 })
 
 .then((data)=>{
@@ -14,12 +16,11 @@ fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/ch
     let character = document.getElementById('cardCulture' + name);
 
     character.innerHTML += data.aliases;
-    characterExtraInfo.innerHTML += data.gender;
+    characterExtraInfo.innerHTML = data.gender;
     console.log(data.aliases);
 });
 }
 
-//const btn = document.getElementById("showModal");
 
 
 
@@ -28,6 +29,9 @@ fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/ch
 
 
 //dice roll
+
+//const btn = document.getElementById("showModal");
+
 
 function rollDice(){
 
@@ -43,7 +47,7 @@ rollOutput.innerHTML = " You rolled a " + roll+ " !";
 
 if(roll == 6 ){
 
-        modal.style.display = "block";
+    modal.style.display = "block";
       
     //document.getElementById("alert").innerHTML="The Gods have smiled upon your fortune! Have another go";
 }
