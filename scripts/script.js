@@ -16,7 +16,7 @@ fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/ch
     let gender = document.getElementById('cardGender' + name);
     let aka = document.getElementById('cardAlias'+ name);
 
-    gender.innerHTML += data.gender;
+    gender.innerHTML = data.gender;
     aka.innerHTML = data.aliases[0];
     
     
