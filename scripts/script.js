@@ -4,7 +4,7 @@ function callApi(name,id){
 
     console.log(name+"     "+id);
 
-fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/characters/' + id)
+fetch ('https://anapioficeandfire.com/api/characters/' + id)
 
 .then ((response)=>{   
      return response.json();
@@ -12,17 +12,19 @@ fetch ('https://cors-anywhere.herokuapp.com/https://anapioficeandfire.com/api/ch
 })
 
 .then((data)=>{
-    //console.log(data);
-    let gender = document.getElementById('cardGender' + name);
-    let aka = document.getElementById('cardAlias'+ name);
-
-    gender.innerHTML = data.gender;
-    aka.innerHTML = data.aliases[0];
-    
-    
-    console.log(data.aliases);
+    let card = document.getElementById('card'+name);
+    card.innerHTML+=`
+        <div class="[ card--body ]">
+            <p>Gender: ${data.gender}</p>
+            <p>Alias: ${data.aliases[0]}</p>
+            <p>Date Of Birth: ${data.born}</p>
+        </div>
+    `
+    console.log(data);
 });
 }
+
+
 
 
 //dice roll
@@ -36,11 +38,16 @@ const modal = document.getElementById("modalPopUp");
 let close = document.getElementsByClassName("close")[0];
 
 let rollOutput = document.getElementById("rollOutput");
-let max = 6;
 
-let roll = Math.ceil(Math.random()*max);
+//let roll = Math.ceil(Math.random()*max);
+let roll = (Math.floor(Math.random() * 6) + 1);
 console.log("you rolled a " + roll+"!");
+
 rollOutput.innerHTML = " You rolled a " + roll+ " !"; 
+
+close.onclick = function() {
+modal.style.display = "none";
+}
 
 if(roll == 6 ){
 
@@ -50,11 +57,10 @@ if(roll == 6 ){
 }
 
 else{
-    close.onclick = function() {
         modal.style.display = "none";
-      };
-    modal.style.display = "none";
-}
+    };
+    
+
 
 }
 
