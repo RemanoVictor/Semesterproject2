@@ -1,18 +1,17 @@
 
 
+
+//fetch statement to get character details
+
 function callApi(name,id){
 
     console.log(name+"     "+id);
 
 fetch ('https://anapioficeandfire.com/api/characters/' + id)
 
-.then ((response)=>{   
-     return response.json();
-     
-})
-
+.then ((response)=>{return response.json();})
 .then((data)=>{
-    let card = document.getElementById('card'+name);
+    let card = document.getElementById('card' + name);
     card.innerHTML+=`
         <div class="[ card--body ]">
             <p>Gender: ${data.gender}</p>
@@ -26,16 +25,9 @@ fetch ('https://anapioficeandfire.com/api/characters/' + id)
 
 
 
-
 //dice roll
 
-//const btn = document.getElementById("showModal");
-
-
 function rollDice(){
-
-const modal = document.getElementById("modalPopUp");
-let close = document.getElementsByClassName("close")[0];
 
 let rollOutput = document.getElementById("rollOutput");
 
@@ -45,23 +37,10 @@ console.log("you rolled a " + roll+"!");
 
 rollOutput.innerHTML = " You rolled a " + roll+ " !"; 
 
-close.onclick = function() {
-modal.style.display = "none";
-}
-
 if(roll == 6 ){
-
-    modal.style.display = "block";
       
-    //document.getElementById("alert").innerHTML="The Gods have smiled upon your fortune! Have another go";
+    document.getElementById("alert").innerHTML="The Gods have smiled upon your fortune! Have another go";
 }
-
-else{
-        modal.style.display = "none";
-    };
-    
-
-
 }
 
 
