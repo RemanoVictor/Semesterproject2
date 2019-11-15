@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,11 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
+
 <body>
 
     <div class="[ row ]">
@@ -28,113 +31,116 @@
     </div>
 
     <div class="[ row ]">
-    <div class="[ col-md-1 ]"></div>
+        <div class="[ col-md-1 ]"></div>
 
-    <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardJon">
-            
-            <div class="[ card--title ]">
-               <h2 id="Jon"> Jon Snow 583 </h2>
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardJon">
+                <div class="[ card--title ]">
+                    <h2 id="Jon"> Jon Snow 583 </h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Jon',583)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
             </div>
-            <button class="[ card--button ]" onclick="callApi('Jon',583)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>
         </div>
-    </div>
 
-    <div class="[ col-md-2 ]">
+        <div class="[ col-md-2 ]">
             <div class="[ card ]" id="cardTyrion">
                 <div class="[ card--title ]">
-                   <h2 id="Tyrion">Tyrion Lannister 1052</h2>
+                    <h2 id="Tyrion">Tyrion Lannister 1052</h2>
                 </div>
                 <button class="[ card--button ]" onclick="callApi('Tyrion',1052)"> View Info </button>
                 <button class="[ card--button ]"> Select Character </button>
             </div>
-    </div>
-    
-    <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardGregor">
-            <div class="[ card--title ]">
-                <h2 id="Gregor">Gregor Clegane 1442</h2>
+        </div>
+
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardGregor">
+                <div class="[ card--title ]">
+                    <h2 id="Gregor">Gregor Clegane 1442</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Gregor',1442)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
             </div>
-            <button class="[ card--button ]" onclick="callApi('Gregor',1442)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
         </div>
-    </div>
-    <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardEuron">
-            <div class="[ card--title ]">
-                <h2 id="Euron">Euron Greyjoy 385</h2>
-            </div>      
-            <button class="[ card--button ]" onclick="callApi('Euron',385)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
-        </div>
-    </div>
-    <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardGilly">
-            <div class="[ card--title ]">
-                <h2 id="Gilly">Gilly 1427</h2>
+
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardEuron">
+                <div class="[ card--title ]">
+                    <h2 id="Euron">Euron Greyjoy 385</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Euron',385)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
             </div>
-            <button class="[ card--button ]" onclick="callApi('Gilly',1427)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
         </div>
-    </div>
-    <div class="[ col-md-1 ]"></div>
-    
+
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardGilly">
+                <div class="[ card--title ]">
+                    <h2 id="Gilly">Gilly 1427</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Gilly',1427)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
+        </div>
+        
+        <div class="[ col-md-1 ]"></div>
+
     </div>
 
     <div class="[ row ]">
-    <div class="[ col-md-1 ]"></div>
+        <div class="[ col-md-1 ]"></div>
 
-    <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardArya">
-            <div class="[ card--title ]">
-                <h2 id="arya">Arya Stark 148</h2>
-            </div>            
-            <button class="[ card--button ]" onclick="callApi('Arya',148)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardArya">
+                <div class="[ card--title ]">
+                    <h2 id="arya">Arya Stark 148</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Arya',148)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
         </div>
-    </div>
-    <div class="[ col-md-2 ]">        
-        <div class="[ card ]" id="cardDaenarys">
-            <div class="[ card--title ]">
-                <h2 id="Daenarys">Daenarys Targaryan 271</h2>
-            </div>            
-            <button class="[ card--button ]" onclick="callApi('Daenarys',271)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardDaenarys">
+                <div class="[ card--title ]">
+                    <h2 id="Daenarys">Daenarys Targaryan 271</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Daenarys',271)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
         </div>
-    </div>
-   <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardBrienne">
-            <div class="[ card--title ]">
-                <h2 id="Brienne">Brienne Tarth</h2>
-            </div>           
-            <button class="[ card--button ]" onclick="callApi('Brienne',216)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardBrienne">
+                <div class="[ card--title ]">
+                    <h2 id="Brienne">Brienne Tarth</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Brienne',216)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
         </div>
-   </div>
-   <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardSam">
-            <div class="[ card--title ]">
-                <h2 id="Sam">Samwell Tarly</h2>
-            </div>            
-            <button class="[ card--button ]" onclick="callApi('Sam',954)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardSam">
+                <div class="[ card--title ]">
+                    <h2 id="Sam">Samwell Tarly</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Sam',954)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
         </div>
-   </div>
-   <div class="[ col-md-2 ]">
-        <div class="[ card ]" id="cardGreyworm">
-            <div class="[ card--title ]">
-                <h2 id="Greyworm">Greyworm 1445</h2>
-            </div>           
-            <button class="[ card--button ]" onclick="callApi('Greyworm',1445)"> View Info </button>
-            <button class="[ card--button ]"> Select Character </button>    
+        <div class="[ col-md-2 ]">
+            <div class="[ card ]" id="cardGreyworm">
+                <div class="[ card--title ]">
+                    <h2 id="Greyworm">Greyworm 1445</h2>
+                </div>
+                <button class="[ card--button ]" onclick="callApi('Greyworm',1445)"> View Info </button>
+                <button class="[ card--button ]"> Select Character </button>
+            </div>
         </div>
-   </div>
-   <div class="[ col-md-1 ]"></div>
-   
+        <div class="[ col-md-1 ]"></div>
+
     </div>
 
 
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
