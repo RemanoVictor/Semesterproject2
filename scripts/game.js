@@ -1,33 +1,44 @@
 //Board Game
 
+playerTurn = {};
 
-//dice roll
-
-function rollDice(){
-
+function rollDice() {
     let rollOutput = document.getElementById("rollOutput");
-    
     //let roll = Math.ceil(Math.random()*max);
-    let roll = (Math.floor(Math.random() * 6) + 1);
-    console.log("you rolled a " + roll+"!");
+    let diceRoll = (Math.floor(Math.random() * 6) + 1);
+    console.log("you rolled a " + diceRoll + "!");
+
+    rollOutput.innerHTML = " You rolled a " + diceRoll + " !";
+
+    // board mechanics
+    (playerOne.turn === true) ? playerTurn = playerOne: playerTurn = playerTwo;
     
-    rollOutput.innerHTML = " You rolled a " + roll+ " !"; 
+    if(playerOne.position != playerOne.position){
+        document.getElementById('tile'+playerTurn.position).innerHTML="";
+    }
+    //dice mechanics
+    if (diceRoll === 6) {
+        alert('well done');
+        playerTurn.position = playerTurn.position + diceRoll;
+        rollDice()
+    } 
+    else {
+        playerTurn.position = playerTurn.position + diceRoll;
+        
+        console.log(playerTurn.position);
+        document.getElementById('tile'+playerTurn.position).innerHTML=`
+            <img src="${playerTurn.token}">
+        `;
+    }
+    //Switch players
+    if (playerTurn.turn === true) {
+        playerOne.turn = false;
+        playerTwo.turn = true;
+    } else {
+        playerOne.turn = true;
+        playerTwo.turn = false;
+    }
+    console.log(playerTurn);
     
-    if(roll == 6 ){
-          
-        document.getElementById("alert").innerHTML="The Gods have smiled upon your fortune! Have another go";
-    }
-    }
 
-
-//Players
-let player1={
-    position:0,
-    turn:true
-};
-
-let player2={
-    position:0,
-    turn:false
-};
-
+}
