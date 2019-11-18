@@ -14,3 +14,34 @@ let playerTwo={
     
 };
 
+
+let trapOne={
+    tileNum:3,
+    penalty:3,
+    message:" You stepped on a lego, move back 3 spaces "
+}
+
+let trapTwo={
+    tileNum:12,
+    penalty:4,
+    message:" Seriously dude, wtf "
+}
+
+
+let trapThree={
+    tileNum:17,
+    penalty:5,
+    message:" A midget carries you a few steps, Move forward 6 steps "
+}
+
+let trapFour={
+    tileNum:24,
+    penalty:2,
+    message:" Dragon steps on yout toe, move back 2 spaces "
+}
+
+let trapFive={
+    tileNum:29,
+    penalty:10,
+    message:" aaaah, so close! buht bye bye "
+}
