@@ -7,48 +7,66 @@
 
     <title>Document</title>
 
-    <link rel="styleshseet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     
 </head>
 <body>
+
+        <p id="rollOutput"> </p>
+        <p id="alert"></p>
+    
+        <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>
     <div class="[ boardGame ]" id="boardGame">
-        <div id="tile1"><p>1</p></div>
-        <div id="tile2"><p>2</p></div>
-        <div id="tile3"></div>
-        <div id="tile4"></div>
-        <div id="tile5"></div>
-        <div id="tile6"></div>
-        <div id="tile7"></div>
-        <div id="tile8"></div>
-        <div id="tile9"></div>
-        <div id="tile10"></div>
-        <div id="tile11"></div>
-        <div id="tile12"></div>
-        <div id="tile13"></div>
-        <div id="tile14"></div>
-        <div id="tile15"></div>
-        <div id="tile16"></div>
-        <div id="tile17"></div>
-        <div id="tile18"></div>
-        <div id="tile19"></div>
-        <div id="tile20"></div>
-        <div id="tile21"></div>
-        <div id="tile22"></div>
-        <div id="tile23"></div>
-        <div id="tile24"></div>
-        <div id="tile25"></div>
-        <div id="tile26"></div>
-        <div id="tile27"></div>
-        <div id="tile28"></div>
-        <div id="tile29"></div>
-        <div id="tile30"></div>
+        <div class="[ row ]">
+            <div id="tile0" class="[ col-sm-1 ][ tile ]"></div>
+            <div id="tile1" class="[ col-sm-2 ][ tile ]"><p>1</p></div>
+            <div id="tile2" class="[ col-sm-2 ][ tile ]"><p>2</p></div>
+            <div id="tile3" class="[ col-sm-2 ][ tile ]"><p>3</p></div>
+            <div id="tile4" class="[ col-sm-2 ][ tile ]"><p>4</p></div>
+            <div id="tile5" class="[ col-sm-2 ][ tile ]"><p>5</p></div>
+            <div id="tile6" class="[ col-sm-1 ][ tile ]"><p>6</p></div>
+        </div>
+
+        <div class="[ row ]">
+            <div id="tile7" class="[ col-sm-2 ][ tile ]"><p>7</p></div>
+            <div id="tile8" class="[ col-sm-2 ][ tile ]"><p>8</p></div>
+            <div id="tile9" class="[ col-sm-2 ][ tile ]"><p>9</p></div>
+            <div id="tile10" class="[ col-sm-2 ][ tile ]"><p>10</p></div>                
+            <div id="tile11" class="[ col-sm-2 ][ tile ]"><p>11</p></div>
+            <div id="tile12" class="[ col-sm-2 ][ tile ]"><p>12</p></div>
+        </div>
+
+        <div class="[ row ]">
+            <div id="tile13" class="[ col-sm-2 ][ tile ]"><p>13</p></div>
+            <div id="tile14" class="[ col-sm-2 ][ tile ]"><p>14</p></div>
+            <div id="tile15" class="[ col-sm-2 ][ tile ]"><p>15</p></div>
+            <div id="tile16" class="[ col-sm-2 ][ tile ]"><p>16</p></div>
+            <div id="tile17" class="[ col-sm-2 ][ tile ]"><p>17</p></div>
+            <div id="tile18" class="[ col-sm-2 ][ tile ]"><p>18</p></div>
+        </div>
+
+        <div class="[ row ]">
+            <div id="tile19" class="[ col-sm-2 ][ tile ]"><p>19</p></div>
+            <div id="tile20" class="[ col-sm-2 ][ tile ]"><p>20</p></div>
+            <div id="tile21" class="[ col-sm-2 ][ tile ]"><p>21</p></div>
+            <div id="tile22" class="[ col-sm-2 ][ tile ]"><p>22</p></div>
+            <div id="tile23" class="[ col-sm-2 ][ tile ]"><p>23</p></div>
+            <div id="tile24" class="[ col-sm-2 ][ tile ]"><p>24</p></div>
+        </div>
+
+        <div class="[ row ]">
+            <div id="tile25" class="[ col-sm-2 ][ tile ]"><p>25</p></div>
+            <div id="tile26" class="[ col-sm-2 ][ tile ]"><p>26</p></div>
+            <div id="tile27" class="[ col-sm-2 ][ tile ]"><p>27</p></div>
+            <div id="tile28" class="[ col-sm-2 ][ tile ]"><p>28</p></div>
+            <div id="tile29" class="[ col-sm-2 ][ tile ]"><p>29</p></div>
+            <div id="tile30" class="[ col-sm-2 ][ tile ]"><p>30</p></div>            
+        </div>
     </div>
 
 
-    <p id="rollOutput"> </p>
-    <p id="alert"></p>
-
-    <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>
     <script src="scripts/player.js"></script>
     <script src="scripts/game.js"></script>
 </body>
