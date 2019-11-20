@@ -17,6 +17,8 @@ function rollDice() {
         playerTurn = playerTwo
     }
 
+    // if players share a tile
+    
     if(playerOne.tileNum !== playerTwo.tileNum){
         document.getElementById('tile'+ playerTurn.tileNum).innerHTML="";
     }
