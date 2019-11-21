@@ -1,7 +1,11 @@
+
+
 //Board Game
 function placeTokens() {
     document.getElementById('tile0').innerHTML += `<img src="${playerOne.token}"/>`
     document.getElementById('tile0').innerHTML += `<img src="${playerTwo.token}"/>`
+    document.getElementById('result').innerHTML = localStorage.getItem("player");
+    
 }
 placeTokens();
 
