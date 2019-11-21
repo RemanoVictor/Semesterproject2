@@ -14,7 +14,7 @@ const playerTwo={
            
 //trap declaration
 const trapOne={
-    tileNum:3,
+    tileNum:5,
     penalty:3,
     message:" You stepped on a lego, move back 3 spaces "
 }
@@ -34,7 +34,7 @@ const trapFour={
     message:" Dragon steps on yout toe, move back 2 spaces "
 }
 const trapFive={
-    tileNum:29,
+    tileNum:(Math.floor(Math.random() * 6) + 1),
     penalty:10,
     message:" aaaah, so close! buht bye bye "
 }

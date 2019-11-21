@@ -37,7 +37,7 @@ function rollDice() {
         rollDice()
     } else {
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
-        console.log(playerTurn.tileNum);
+        //console.log(playerTurn.tileNum);
         document.getElementById('tile' + playerTurn.tileNum).innerHTML = `
             <img src="${playerTurn.token}">
         `;
@@ -51,3 +51,4 @@ function rollDice() {
         playerOne.turn = true;
     }
 }
+console.log(trapFive.tileNum);
