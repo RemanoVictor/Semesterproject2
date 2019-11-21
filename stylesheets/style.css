@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .tile {
   border: 1px solid black;
   height: 6em;
@@ -9,12 +14,12 @@ img {
   width: 100%;
 }
 
-.welcome {
-  background-color: rgba(0, 0, 0, 0.5);
+.boardGame {
+  width: 100%;
+  padding: 0 15%;
 }
 
 .container-fluid {
-  background-color: red;
   padding: 10px;
 }
 
@@ -32,11 +37,6 @@ img {
 
 .navigation a {
   color: white;
-}
-
-.boardGame {
-  width: 100%;
-  padding: 0 15%;
 }
 
 .card {
@@ -57,5 +57,13 @@ img {
 .card button {
   text-align: left;
   margin: 5px;
+}
+
+.welcome h2 {
+  text-align: center;
+}
+
+.welcome p {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

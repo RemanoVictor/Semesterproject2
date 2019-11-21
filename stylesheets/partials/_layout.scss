@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 .tile{
     border: 1px solid black;
     height: 6em;
@@ -10,15 +12,16 @@ img{
     width: 100%;
 }
 
-.welcome{
-    background-color: rgba(000, 000, 000, 0.5);
+.boardGame{
+    width: 100%;        
+    padding:0 15%;
 }
 
 
 // index page
 
 .container-fluid{
-    background-color: red;
+    
     padding: 10px;
 }
 
@@ -36,12 +39,6 @@ img{
     }
 }
 
-.boardGame{
-    width: 100%;        
-    padding:0 15%;
-}
-
-
 .card{    
     border: 1px solid black;
     margin: 10px;
@@ -52,10 +49,20 @@ img{
     }
     & h2{
         font-weight: bold;
+        
     }
     & button{
         text-align: left;
         margin: 5px;
+    }
+}
+
+.welcome{
+    h2{
+        text-align: center;   
+    }
+    & p{
+        text-align: center;
     }
 }
 
