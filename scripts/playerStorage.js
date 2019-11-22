@@ -1,9 +1,13 @@
-function saveChar(title) {
+ function saveChar(title) {
     if (typeof (Storage) !== "undefined") {
-        localStorage.setItem("player",title);
-        //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        window.sessionStorage.setItem("playerOne",title);
+        window.sessionStorage.setItem('src','media/tokens/'+title+'.svg')
+        //window.sessionStorage.setItem("src",title +'.svg');
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
 
-} 
+ } 
+
+
+ 
