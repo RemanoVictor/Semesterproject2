@@ -14,170 +14,137 @@
 
 </head>
 
-<body>
-    <div class="[ navigation ]">
-        <ul>
-            <li> <a href="boardgame.html"> board</a></li>
-        </ul>
-    </div>
+<body class="[ index ]">
 
-    <div class="[ container ] [ welcome ]">
-        <div class="[ row ]">        
-            <div class="[ col-md-12 ][ jumbotron ]">
-                <h2> Welcome to Game of Gnomes </h2>
-                <p> Are you ready to race for the iron gnome!?</p></p>
-            </div>
-        </div>
-
-        <div class="[ row ]">
-            <h2> Rules: </h2>
-            <p> The rules are simple: </p>
+    <div class="[ row ]">
+        <div class="[ navigation ]">
             <ul>
-                <li>Pick a character</li>
-                <li>Roll The dice</li>
-                <li>Finish first</li>
-                <li></li>
+                <li> <a href="boardgame.html"> board</a></li>
             </ul>
         </div>
+    </div>
+
+    <div class="[ row ]">
+        <div class="[ container-fluid ][ welcome ]">
+            <video autoplay muted loop class="[ backgroundVid ]">
+                <source src="media/videos/Pexels Videos 2715412.mp4" type="video/mp4">
+            </video>
+
+            <div class="[ container ][ content ]">
+                <div class="[ row ]">
+                    <div class="[ col-md-12 ]">
+                        <h2> <span class="[ firstLetter ]">W</span>elcome <br> to <br> Game of Gnomes </h2>
+                    </div>
+                </div>
+
+                <div class="[ row ]">
+                    <h3> The rules are simple: </h3>
+                    <ul>
+                        <li>Choose your character</li>
+                        <li>Roll The dice</li>
+                        <li>Finish first</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="[ container-fluid ] [ characters ]">
+        
+            <div class="[ row ]">
+                <div class="[ col-sm-1 ]"></div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardJon">                        
+                        <button class="[ card--button ]" onclick="callApi('Jon',583)">
+                            <img class="[ card--img ]" src="media/tokens/jon.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardTyrion">                        
+                        <button class="[ card--button ]" onclick="callApi('Tyrion',1052)">                            
+                            <img class="[ card--img ]" src="media/tokens/tyrion.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardGregor">                        
+                        <button class="[ card--button ]" onclick="callApi('Gregor',1442)">
+                            <img class="[ card--img ]" src="media/tokens/gregor.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardEuron">                        
+                        <button class="[ card--button ]" onclick="callApi('Euron',385)">
+                            <img class="[ card--img ]" src="media/tokens/euron.svg">
+                        </button>                        
+                    </div>
+                </div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardGilly">                        
+                        <button class="[ card--button ]" onclick="callApi('Gilly',1427)">
+                            <img class="[ card--img ]" src="media/tokens/gilly.svg">
+                        </button>                    
+                    </div>
+                </div>
+
+                <div class="[ col-lg-1 ]"></div>
+
+            </div>
+
         
 
+        
+            <div class="[ row ]">
+                <div class="[ col-md-1 ]"></div>
+
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardArya">                        
+                        <button class="[ card--button ]" onclick="callApi('Arya',148)">
+                            <img class="[ card--img ]" src="media/tokens/arya.svg">
+                        </button>                        
+                    </div>
+                </div>
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardDaenarys">                        
+                        <button class="[ card--button ]" onclick="callApi('Daenarys',271)">
+                            <img class="[ card--img ]" src="media/tokens/daenarys.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardBrienne">                        
+                        <button class="[ card--button ]" onclick="callApi('Brienne',216)">
+                            <img class="[ card--img ]" src="media/tokens/brienne.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardSam">                        
+                        <button class="[ card--button ]" onclick="callApi('Sam',954)">
+                            <img class="[ card--img ]" src="media/tokens/sam.svg">
+                        </button>                        
+                    </div>
+                </div>
+                <div class="[ col-md-2 ]">
+                    <div class="[ card ]" id="cardGreyworm">                        
+                        <button class="[ card--button ]" onclick="callApi('Greyworm',1445)">
+                            <img class="[ card--img ]" src="media/tokens/greyworm.svg">
+                        </button>                        
+                    </div>
+                </div>
+                <div class="[ col-md-1 ]"></div>
+
+            </div>
+        
 
     </div>
-
-
-
-    <div class="[ container-fluid ]">
-     
-        <div class="[ row ]">
-            <div class="[ col-md-1 ]"></div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardJon">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Jon">Jon</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Jon',583)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('jon')"> Select Character </button>
-                </div>
-            </div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardTyrion">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Tyrion">Tyrion Lannister</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Tyrion',1052)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Tyrion Lannister')"> Select Character </button>
-                </div>
-            </div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardGregor">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Gregor">Gregor Clegane</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Gregor',1442)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Gregor Clegane')"> Select Character </button>
-                </div>
-            </div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardEuron">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Euron">Euron Greyjoy</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Euron',385)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Euron Greyjoy')"> Select Character </button>
-                </div>
-            </div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardGilly">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Gilly">Gilly Tarly</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Gilly',1427)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Gilly Tarly')"> Select Character </button>
-                </div>
-            </div>
-
-            <div class="[ col-md-1 ]"></div>
-
-        </div>
-
-        <div class="[ row ]">
-            <div class="[ col-md-1 ]"></div>
-
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardArya">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="arya">Arya Stark</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Arya',148)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Arya Stark')"> Select Character </button>
-                </div>
-            </div>
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardDaenarys">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Daenarys">Daenarys Targaryan</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Daenarys',271)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Daenarys Targaryan')"> Select Character </button>
-                </div>
-            </div>
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardBrienne">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Brienne">Brienne Tarth</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Brienne',216)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Brienne Tarth')"> Select Character </button>
-                </div>
-            </div>
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardSam">
-                    <img class="[ card--img ]"
-                        src="media/tokens/">
-                    <div class="[ card--title ]">
-                        <h2 id="Sam">Samwell Tarly</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Sam',954)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('Samwell Tarly')"> Select Character </button>
-                </div>
-            </div>
-            <div class="[ col-md-2 ]">
-                <div class="[ card ]" id="cardGreyworm">
-                    <img class="[ card--img ]"
-                        src="media/tokens/greyworm.svg">
-                    <div class="[ card--title ]">
-                        <h2 id="Greyworm">Greyworm</h2>
-                    </div>
-                    <button class="[ card--button ]" onclick="callApi('Greyworm',1445)"> View Info </button>
-                    <button class="[ card--button ]" onclick="saveChar('greyworm')"> Select Character </button>
-                </div>
-            </div>
-            <div class="[ col-md-1 ]"></div>
-
-        </div>
-    </div>
-
 
     <script src="scripts/script.js"></script>
     <script src="scripts/playerStorage.js"></script>

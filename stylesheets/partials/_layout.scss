@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
 }
+
+
 .tile{
     border: 1px solid black;
     height: 6em;
@@ -20,14 +22,60 @@ img{
 
 // index page
 
-.container-fluid{
-    
+.index{
+    background-color: black;
+}
+
+
+//background video
+
+.backgroundVid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+
+
+.welcome{
+    height: 110vh;
+    & .content {
+        margin-top: 5%;
+        position: relative;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        padding: 60px;
+        & h2{
+            text-align: center;   
+            font-size: 5em;
+            font-family: Canterbury, sans-serif;
+        }
+        & h3{
+            //font-size: 2.5em;
+            text-align: center;   
+        }
+        & p{
+            text-align: center;
+        }
+        
+      }
+}
+
+.container-fluid{    
     padding: 10px;
+    width: 100vw;
 }
 
 .navigation{
-    background-color: black;
-    & ul{
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    & ul{        
         margin: 0;
     }
     & li{
@@ -43,6 +91,8 @@ img{
     border: 1px solid black;
     margin: 10px;
     text-align: center;
+    width: 100%;
+    color: white;
     & img{
         width: 100%;
         margin: 0;
@@ -55,14 +105,17 @@ img{
         text-align: left;
         margin: 5px;
     }
+    & button{
+        background-color: transparent;
+        border: none;
+    }
 }
 
-.welcome{
-    h2{
-        text-align: center;   
-    }
-    & p{
-        text-align: center;
-    }
+.characters{
+    background-color:black;
+    position: absolute;    
 }
+
+//characters
+
 

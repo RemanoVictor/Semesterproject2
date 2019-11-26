@@ -19,12 +19,56 @@ img {
   padding: 0 15%;
 }
 
+.index {
+  background-color: black;
+}
+
+.backgroundVid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.welcome {
+  height: 110vh;
+}
+
+.welcome .content {
+  margin-top: 5%;
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 60px;
+}
+
+.welcome .content h2 {
+  text-align: center;
+  font-size: 5em;
+  font-family: Canterbury, sans-serif;
+}
+
+.welcome .content h3 {
+  text-align: center;
+}
+
+.welcome .content p {
+  text-align: center;
+}
+
 .container-fluid {
   padding: 10px;
+  width: 100vw;
 }
 
 .navigation {
-  background-color: black;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 10px;
 }
 
 .navigation ul {
@@ -43,6 +87,8 @@ img {
   border: 1px solid black;
   margin: 10px;
   text-align: center;
+  width: 100%;
+  color: white;
 }
 
 .card img {
@@ -59,11 +105,47 @@ img {
   margin: 5px;
 }
 
-.welcome h2 {
-  text-align: center;
+.card button {
+  background-color: transparent;
+  border: none;
 }
 
-.welcome p {
-  text-align: center;
+.characters {
+  background-color: black;
+  position: absolute;
+}
+
+.checkbox label {
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label:before {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.checkbox label img {
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.checkbox :checked + label img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 0 0 5px #fff;
+          box-shadow: 0 0 5px #fff;
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

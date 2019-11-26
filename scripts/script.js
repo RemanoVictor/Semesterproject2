@@ -11,6 +11,7 @@ function callApi(name, id) {
                     <p>Gender: ${data.gender}</p>
                     <p>Alias: ${data.aliases[0]}</p>
                     <p>Date Of Birth: ${data.born}</p>
+                    <button class="[ card--button ]" onclick="saveChar('${name}')">Select Character</button>
                 </div>
             `
         });
