@@ -34,11 +34,10 @@ const trapFour={
     message:" Dragon steps on yout toe, move back 2 spaces "
 }
 const trapFive={
-    tileNum:(Math.floor(Math.random() * 6) + 1),
+    tileNum:29,
     penalty:10,
     message:" aaaah, so close! buht bye bye "
 }
-
 
 
 

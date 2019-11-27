@@ -1,6 +1,6 @@
 document.getElementById('result').innerHTML = sessionStorage.getItem("player");
 
-playerOne.token = document.getElementById('test').src=sessionStorage.getItem("src");
+//playerOne.token = document.getElementById('test').src=sessionStorage.getItem("src");
 
 //Board Game
 function placeTokens() {
@@ -46,6 +46,9 @@ function rollDice() {
             <img src="${playerTurn.token}">
         `;
     }
+
+    
+    console.log(playerTurn);
     //Switch players
     if (playerTurn === playerOne) {
         playerOne.turn = false;
