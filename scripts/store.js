@@ -1,15 +1,13 @@
 const playerOne={
     tileNum:0,
     turn:true,
-    token:sessionStorage.getItem("icon"),
-    test:'play1'    
+    token:sessionStorage.getItem("icon") 
 };
 
 const playerTwo={    
     tileNum:0,
     turn:false,
-    token:sessionStorage.getItem("icon2"),
-    test:'play2'    
+    token:sessionStorage.getItem("icon2")
 };
            
 //trap declaration

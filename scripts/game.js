@@ -1,11 +1,10 @@
 document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne");
-
-//playerOne.token = document.getElementById('test').src=sessionStorage.getItem("src");
+document.getElementById('result2').innerHTML+= sessionStorage.getItem("playerTwo");
 
 //Board Game
 function placeTokens() {
-    document.getElementById('tile0').innerHTML += `<img src="${playerOne.token}"/>`
-    document.getElementById('tile0').innerHTML += `<img src="${playerTwo.token}"/>`
+    document.getElementById('tile0').innerHTML += `<img src="${sessionStorage.getItem('icon')}"/>`
+    document.getElementById('tile0').innerHTML += `<img src="${sessionStorage.getItem('icon2')}"/>`
 }
 placeTokens();
 
@@ -57,5 +56,10 @@ function rollDice() {
         playerTwo.turn = false;
         playerOne.turn = true;
     }
+
+
+    if(playerTurn.tileNum===null){
+        alert('You have won!');
+    }
 }
-console.log(trapFive.tileNum);
+
