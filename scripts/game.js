@@ -1,4 +1,4 @@
-document.getElementById('result').innerHTML = sessionStorage.getItem("player");
+document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne");
 
 //playerOne.token = document.getElementById('test').src=sessionStorage.getItem("src");
 

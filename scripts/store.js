@@ -1,14 +1,14 @@
 const playerOne={
     tileNum:0,
     turn:true,
-    token:'',
+    token:sessionStorage.getItem("icon"),
     test:'play1'    
 };
 
 const playerTwo={    
     tileNum:0,
     turn:false,
-    token:'',
+    token:sessionStorage.getItem("icon2"),
     test:'play2'    
 };
            
