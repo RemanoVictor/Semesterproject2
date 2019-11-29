@@ -29,7 +29,7 @@ const trapThree={
 const trapFour={
     tileNum:24,
     penalty:2,
-    message:" Dragon steps on yout toe, move back 2 spaces "
+    message:" Dragon steps on your toe, move back 2 spaces "
 }
 const trapFive={
     tileNum:29,

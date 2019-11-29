@@ -1,0 +1,32 @@
+//background video
+
+.backgroundVid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+.welcome{
+    & .content {
+        margin-top: 10%;
+        position: relative;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        padding: 60px;
+        & h2{
+            text-align: center;   
+            font-size: 5em;
+            font-family: blackchancery, sans-serif;
+        }        
+        & h3{
+            text-align: center;   
+        }
+        & p{
+            text-align: center;
+        }        
+      }
+}

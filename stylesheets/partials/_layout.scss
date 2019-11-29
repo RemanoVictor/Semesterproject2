@@ -1,69 +1,13 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
-
-.tile{
-    border: 1px solid black;
-    height: 6em;
-    width: 10em;
-    margin: 2px;
-    padding: 20px;
+.body{
+    background-color: black;
 }
 
 img{
     width: 40%;
-}
-
-.boardGame{
-    width: 100%;        
-    padding:0 15%;
-}
-
-
-// index page
-
-.index{
-    background-color: black;
-}
-
-
-//background video
-
-.backgroundVid {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-
-
-.welcome{
-    height: 110vh;
-    & .content {
-        margin-top: 5%;
-        position: relative;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        padding: 60px;
-        & h2{
-            text-align: center;   
-            font-size: 5em;
-            font-family: Canterbury, sans-serif;
-        }
-        & h3{
-            //font-size: 2.5em;
-            text-align: center;   
-        }
-        & p{
-            text-align: center;
-        }
-        
-      }
 }
 
 .container-fluid{    
@@ -81,42 +25,11 @@ img{
     }
     & li{
         list-style-type: none;
+        display: inline-block;
     }
     
     & a{
         color: white;
     }
 }
-
-.card{    
-    border: 1px solid black;
-    margin: 10px;
-    text-align: center;
-    width: 100%;
-    color: white;
-    & img{
-        width: 100%;
-        margin: 0;
-    }
-    & h2{
-        font-weight: bold;
-        
-    }
-    & button{
-        text-align: left;
-        margin: 5px;
-    }
-    & button{
-        background-color: transparent;
-        border: none;
-    }
-}
-
-.characters{
-    background-color:black;
-    position: absolute;    
-}
-
-//characters
-
 

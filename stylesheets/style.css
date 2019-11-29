@@ -3,61 +3,12 @@
           box-sizing: border-box;
 }
 
-.tile {
-  border: 1px solid black;
-  height: 6em;
-  width: 10em;
-  margin: 2px;
-  padding: 20px;
+.body {
+  background-color: black;
 }
 
 img {
   width: 40%;
-}
-
-.boardGame {
-  width: 100%;
-  padding: 0 15%;
-}
-
-.index {
-  background-color: black;
-}
-
-.backgroundVid {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
-
-.welcome {
-  height: 110vh;
-}
-
-.welcome .content {
-  margin-top: 5%;
-  position: relative;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  padding: 60px;
-}
-
-.welcome .content h2 {
-  text-align: center;
-  font-size: 5em;
-  font-family: Canterbury, sans-serif;
-}
-
-.welcome .content h3 {
-  text-align: center;
-}
-
-.welcome .content p {
-  text-align: center;
 }
 
 .container-fluid {
@@ -78,15 +29,53 @@ img {
 
 .navigation li {
   list-style-type: none;
+  display: inline-block;
 }
 
 .navigation a {
   color: white;
 }
 
+.backgroundVid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.welcome .content {
+  margin-top: 10%;
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 60px;
+}
+
+.welcome .content h2 {
+  text-align: center;
+  font-size: 5em;
+  font-family: blackchancery, sans-serif;
+}
+
+.welcome .content h3 {
+  text-align: center;
+}
+
+.welcome .content p {
+  text-align: center;
+}
+
+.characters {
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  height: 50vh;
+}
+
 .card {
-  border: 1px solid black;
-  margin: 10px;
   text-align: center;
   width: 100%;
   color: white;
@@ -102,17 +91,43 @@ img {
 }
 
 .card button {
-  text-align: left;
-  margin: 5px;
-}
-
-.card button {
   background-color: transparent;
   border: none;
 }
 
-.characters {
-  background-color: black;
-  position: absolute;
+.card .card--body {
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+}
+
+.card .card--button {
+  border: 1px solid black;
+}
+
+.carousel-indicators {
+  top: 110%;
+}
+
+.boardGame {
+  width: 100%;
+  padding: 0 15%;
+}
+
+.dice {
+  position: fixed;
+}
+
+.tile {
+  border: 1px solid black;
+  height: 6em;
+  width: 10.5em;
+  margin: 2px;
+  padding: 20px;
+  border-radius: 200px;
+}
+
+.trap {
+  background-color: rgba(255, 0, 0, 0.5);
 }
 /*# sourceMappingURL=style.css.map */

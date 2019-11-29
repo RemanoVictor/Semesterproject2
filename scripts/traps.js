@@ -1,3 +1,4 @@
+   
    //trap mechanics
    function setTrap(){
     if (playerTurn.tileNum === trapOne.tileNum) {
@@ -22,14 +23,14 @@
         `;
        
     } else if (playerTurn.tileNum === trapFour.tileNum) {
-        alert(trapThree.message);
+        alert(trapFour.message);
         playerTurn.tileNum = playerTurn.tileNum - trapFour.penalty;
         document.getElementById("tile" + playerTurn.tileNum).innerHTML = `
             <img src="${playerTurn.token}">
         `;
        
     } else if (playerTurn.tileNum === trapFive.tileNum) {
-        alert(trapThree.message);
+        alert(trapFive.message);
         playerTurn.tileNum = playerTurn.tileNum - trapFive.penalty;
         document.getElementById("tile" + playerTurn.tileNum).innerHTML = `
             <img src="${playerTurn.token}">
@@ -37,6 +38,4 @@
         
     }
 }
-
-
 setTrap();
