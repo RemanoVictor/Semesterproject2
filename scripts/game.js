@@ -19,18 +19,18 @@ function rollDice() {
     // if players share a tile
     
     if (playerOne.tileNum !== playerTwo.tileNum) {        
-        document.getElementById('tile' + playerTurn.tileNum).innerHTML = "";
+        document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
     } else {
         if (playerOne.turn === true) {
-            document.getElementById('tile' + playerTurn.tileNum).innerHTML = "";
+            document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerTwo.token}"/>`;
         } else {                        
-            document.getElementById('tile' + playerTurn.tileNum).innerHTML = "";
+            document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerOne.token}"/>`;
         }
     }
     
-    let diceRoll =(Math.floor(Math.random() * 6) + 1);
+    let diceRoll =31; //(Math.floor(Math.random() * 6) + 1);
     document.getElementById("rollOutput").innerHTML = " You rolled a " + diceRoll + " !";
 
     //dice mechanics
@@ -38,7 +38,7 @@ function rollDice() {
         alert('You rolled a 6!');
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
         rollDice()
-    } else {
+    } else {        
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
         document.getElementById('tile' + playerTurn.tileNum).innerHTML += `
             <img src="${playerTurn.token}">
@@ -90,12 +90,22 @@ function rollDice() {
         default:          
       }
     } setTrap();
+
+    if(playerTurn.tileNum === null){
+        alert('you win');
+    }
     
     //Switch players
     if (playerTurn === playerOne) {
+        document.getElementById('player1Update').innerHTML = "";
+        document.getElementById('player1Update').innerHTML += `<p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;
+        
         playerOne.turn = false;
         playerTwo.turn = true;
     } else {
+        document.getElementById('player2Update').innerHTML = "";
+        document.getElementById('player2Update').innerHTML += `<p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
+        //document.getElementById('player2').innerHTML = "";
         playerTwo.turn = false;
         playerOne.turn = true;
     }

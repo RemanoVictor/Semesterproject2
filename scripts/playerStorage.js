@@ -8,8 +8,9 @@ function saveChar(name){
     else{        
         sessionStorage.setItem("playerTwo", name)
         sessionStorage.setItem("icon2","/media/tokens/"+name+'.svg');
-        if(count===1){
-            window.location = "http://127.0.0.1:5500/boardgame.html";
+        if(count===1){        
+            //confirm("Are you ready");
+            //window.location = "http://127.0.0.1:5500/boardgame.html";
         }        
     }
 }

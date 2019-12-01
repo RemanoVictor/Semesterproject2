@@ -1,10 +1,12 @@
 const playerOne={
+    title:sessionStorage.getItem('playerOne'),
     tileNum:0,
     turn:true,
     token:sessionStorage.getItem("icon") 
 };
 
-const playerTwo={    
+const playerTwo={
+    title:sessionStorage.getItem('playerTwo'),
     tileNum:0,
     turn:false,
     token:sessionStorage.getItem("icon2")
