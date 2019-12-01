@@ -15,83 +15,107 @@
 </head>
 
 <body>
-        <div class="[ navigation ]">
-                <ul>
-                    <li> <a href="index.html"> Home</a></li>
-                <li><a href="landing.html"> characters</a></li>
-                </ul>
-        </div>
+    <div class="[ navigation ]">
+        <ul>
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="characaters.html">characters</a></li>
+        </ul>
+    </div>
 
-        <div class="[container]">
-            <p id="rollOutput"></p>
-            <p id="result"></p>
-            <p id="result2"></p>
-
-            <img src="" id="test">
-
-    <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>
-    <div class="[ boardGame ]" id="boardGame">
+    <div class="[container]">
         <div class="[ row ]">
+            <div class="[ col-sm-2 ]"></div>
+
+            <div class="[ col-sm-3 ]" id="player1" class="[ playerOne ]">
+                <h2 id="result"></h2>
+            </div>
+
+            <div class="[ col-sm-2 ]">
+                <p id="rollOutput"></p> 
+                <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>   
+            </div>
+
+            <div class="[ col-sm-3 ]" id="player2" class="[ playerTwo ]">
+                <h2 id="result2"></h2>
+            </div>   
+            <div class="[ col-sm-2 ]"></div>
+        </div>     
+    </div>              
+
+    <div class="[ container-fluid ][ boardGame ]" id="boardGame">
+        <div class="[ row ]">            
             <div id="tile25" class="[ col-sm-2 ][ tile ]">
                 <p>25</p>
             </div>
+
             <div id="tile26" class="[ col-sm-2 ][ tile ]">
                 <p>26</p>
             </div>
+            
             <div id="tile27" class="[ col-sm-2 ][ tile ]">
                 <p>27</p>
             </div>
+
             <div id="tile28" class="[ col-sm-2 ][ tile ]">
                 <p>28</p>
             </div>
-            <div id="tile29" class="[ col-sm-2 ][ tile ][ trap ]">
+
+            <div id="tile29" class="[ col-lg-2 ][ tile ][ trap ]">
                 <p>29</p>
             </div>
-            <div id="tile30" class="[ col-sm-2 ][ tile ]">
+
+            <div id="tile30" class="[ col-lg-2 ][ tile ]">
                 <p>30</p>
-            </div>
+            </div>        
         </div>
 
         <div class="[ row ]">
-
             <div id="tile24" class="[ col-sm-2 ][ tile ][ trap ]">
                 <p>24</p>
             </div>
+
             <div id="tile23" class="[ col-sm-2 ][ tile ]">
                 <p>23</p>
             </div>
+
             <div id="tile22" class="[ col-sm-2 ][ tile ]">
                 <p>22</p>
             </div>
+
             <div id="tile21" class="[ col-sm-2 ][ tile ]">
                 <p>21</p>
             </div>
+
             <div id="tile20" class="[ col-sm-2 ][ tile ]">
                 <p>20</p>
             </div>
+
             <div id="tile19" class="[ col-sm-2 ][ tile ]">
                 <p>19</p>
             </div>
-
         </div>
-
+        
         <div class="[ row ]">
-
             <div id="tile13" class="[ col-sm-2 ][ tile ]">
                 <p>13</p>
             </div>
+
             <div id="tile14" class="[ col-sm-2 ][ tile ]">
                 <p>14</p>
             </div>
+
             <div id="tile15" class="[ col-sm-2 ][ tile ]">
                 <p>15</p>
             </div>
+
             <div id="tile16" class="[ col-sm-2 ][ tile ]">
                 <p>16</p>
             </div>
+
             <div id="tile17" class="[ col-sm-2 ][ tile ][ trap ]">
                 <p>17</p>
             </div>
+
             <div id="tile18" class="[ col-sm-2 ][ tile ]">
                 <p>18</p>
             </div>
@@ -101,45 +125,54 @@
             <div id="tile12" class="[ col-sm-2 ][ tile ][ trap ]">
                 <p>12</p>
             </div>
+
             <div id="tile11" class="[ col-sm-2 ][ tile ]">
                 <p>11</p>
             </div>
+
             <div id="tile10" class="[ col-sm-2 ][ tile ]">
                 <p>10</p>
             </div>
+
             <div id="tile9" class="[ col-sm-2 ][ tile ]">
                 <p>9</p>
             </div>
+
             <div id="tile8" class="[ col-sm-2 ][ tile ]">
                 <p>8</p>
             </div>
+
             <div id="tile7" class="[ col-sm-2 ][ tile ]">
                 <p>7</p>
             </div>
-
         </div>
 
         <div class="[ row ]">
-
             <div id="tile1" class="[ col-sm-2 ][ tile ]">
                 <p>1</p>
             </div>
+
             <div id="tile2" class="[ col-sm-2 ][ tile ]">
                 <p>2</p>
             </div>
+
             <div id="tile3" class="[ col-sm-2 ][ tile ]">
                 <p>3</p>
             </div>
+
             <div id="tile4" class="[ col-sm-2 ][ tile ]">
                 <p>4</p>
             </div>
+
             <div id="tile5" class="[ col-sm-2 ][ tile ] [ trap ]">
                 <p>5</p>
             </div>
+
             <div id="tile6" class="[ col-sm-2 ][ tile ]">
                 <p>6</p>
             </div>
         </div>
+
         <div class="[ row ]">
             <div id="tile0" class="[ col-sm-12 ][ tile ]"></div>
         </div>

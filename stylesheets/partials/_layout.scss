@@ -1,25 +1,27 @@
 *{
-    box-sizing: border-box;    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .body{
     background-color: black;
+}
+.container-fluid{
+    //background-color: black;
+    margin-left: 5%;
+    
 }
 
 img{
     width: 40%;
 }
 
-.container-fluid{    
-    padding: 10px;
-    width: 100vw;
-}
-
 .navigation{
     position: relative;
     background-color:rgba(0, 0, 0, 0.5);
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     & ul{        
         margin: 0;
     }

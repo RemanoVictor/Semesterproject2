@@ -1,5 +1,7 @@
 document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne");
+document.getElementById('player1').innerHTML += `<img src="${sessionStorage.getItem('icon')}">`;
 document.getElementById('result2').innerHTML+= sessionStorage.getItem("playerTwo");
+document.getElementById('player2').innerHTML += `<img src="${sessionStorage.getItem('icon2')}">`;
 
 //Board Game
 
@@ -29,7 +31,6 @@ function rollDice() {
     }
     
     let diceRoll =(Math.floor(Math.random() * 6) + 1);
-    //console.log("you rolled a " + diceRoll + "!");
     document.getElementById("rollOutput").innerHTML = " You rolled a " + diceRoll + " !";
 
     //dice mechanics
@@ -52,8 +53,7 @@ function rollDice() {
             playerTurn.tileNum = playerTurn.tileNum - trapOne.penalty;
             document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                 <img src="${playerTurn.token}">
-            `;
-          // code block
+            `;          
         break;
         case   trapTwo.tileNum:
                 alert(trapTwo.message);
@@ -62,7 +62,6 @@ function rollDice() {
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                     <img src="${playerTurn.token}">
                 `;
-          // code block
         break;
         case trapThree.tileNum:
                 alert(trapThree.message);
@@ -88,8 +87,7 @@ function rollDice() {
                     <img src="${playerTurn.token}">
                 `;
         break;
-        default:
-          // code block
+        default:          
       }
     } setTrap();
     

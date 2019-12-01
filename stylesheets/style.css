@@ -1,26 +1,27 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .body {
   background-color: black;
 }
 
-img {
-  width: 40%;
+.container-fluid {
+  margin-left: 5%;
 }
 
-.container-fluid {
-  padding: 10px;
-  width: 100vw;
+img {
+  width: 40%;
 }
 
 .navigation {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 
 .navigation ul {
@@ -109,9 +110,13 @@ img {
   top: 110%;
 }
 
-.boardGame {
-  width: 100%;
-  padding: 0 15%;
+.playerOne {
+  padding: 50px;
+  text-align: center;
+}
+
+.playerTwo {
+  padding: 50px;
 }
 
 .dice {
@@ -120,11 +125,11 @@ img {
 
 .tile {
   border: 1px solid black;
-  height: 6em;
-  width: 10.5em;
+  height: 10em;
+  width: 15%;
   margin: 2px;
   padding: 20px;
-  border-radius: 200px;
+  border-radius: 20px;
 }
 
 .trap {

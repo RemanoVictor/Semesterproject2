@@ -1,22 +1,25 @@
-.boardGame{
-    width: 100%;        
-    padding:0 15%;
+.playerOne{
+    padding: 50px;
+    text-align: center;
 }
 
+.playerTwo{
+    padding: 50px;
+}
 .dice{
     position: fixed;
 }
 
 .tile{
     border: 1px solid black;
-    height: 6em;
-    width: 10.5em;
+    height: 10em;
+    width: 15%;
     margin: 2px;
     padding: 20px;
-    border-radius: 200px;
-    
+    border-radius: 20px;
 }
 
 .trap{
     background-color: rgba(255, 000, 000,0.5 );
 }
+
