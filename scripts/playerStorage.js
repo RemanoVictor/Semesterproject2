@@ -9,8 +9,8 @@ function saveChar(name){
         sessionStorage.setItem("playerTwo", name)
         sessionStorage.setItem("icon2","/media/tokens/"+name+'.svg');
         if(count===1){        
-            //confirm("Are you ready");
-            //window.location = "http://127.0.0.1:5500/boardgame.html";
+            confirm("Are you ready");
+            window.location = "http://127.0.0.1:5500/boardgame.html";
         }        
     }
 }

@@ -1,25 +1,46 @@
-.playerOne{
-    padding: 50px;
+.boardGame{
+    border: 1px solid white;
+    //padding: 50px;
+    & img{
+        width: 40%;
+    }
+    & .tile{
+        border: 1px solid white;
+        color: white;
+        height: 10em;
+        width: 15%;
+        margin: 2px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+}
+
+
+.player{
     text-align: center;
 }
 
-.playerTwo{
-    padding: 50px;
-}
-.dice{
-    position: fixed;
+.update{
+    color: white;
 }
 
-.tile{
-    border: 1px solid black;
-    height: 10em;
-    width: 15%;
-    margin: 2px;
-    padding: 20px;
-    border-radius: 20px;
-}
+
 
 .trap{
     background-color: rgba(255, 000, 000,0.5 );
+}
+
+.dicebox{
+    text-align: center;
+    margin: 15px;
+    color: white;
+    & button{
+        color: black;
+    }
+}
+
+.updates{
+    text-align: center;
 }
 

@@ -1,3 +1,5 @@
+//players
+
 const playerOne={
     title:sessionStorage.getItem('playerOne'),
     tileNum:0,
@@ -12,7 +14,7 @@ const playerTwo={
     token:sessionStorage.getItem("icon2")
 };
            
-//trap declaration
+//traps
 const trapOne={
     tileNum:5,
     penalty:3,
@@ -26,7 +28,7 @@ const trapTwo={
 const trapThree={
     tileNum:17,
     penalty:5,
-    message:" A midget carries you a few steps, Move forward 6 steps "
+    message:" A midget carries you 6 steps forward "
 }
 const trapFour={
     tileNum:24,

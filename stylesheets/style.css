@@ -5,16 +5,12 @@
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
 .body {
   background-color: black;
-}
-
-.container-fluid {
-  margin-left: 5%;
-}
-
-img {
-  width: 40%;
 }
 
 .navigation {
@@ -110,21 +106,17 @@ img {
   top: 110%;
 }
 
-.playerOne {
-  padding: 50px;
-  text-align: center;
+.boardGame {
+  border: 1px solid white;
 }
 
-.playerTwo {
-  padding: 50px;
+.boardGame img {
+  width: 40%;
 }
 
-.dice {
-  position: fixed;
-}
-
-.tile {
-  border: 1px solid black;
+.boardGame .tile {
+  border: 1px solid white;
+  color: white;
   height: 10em;
   width: 15%;
   margin: 2px;
@@ -132,7 +124,29 @@ img {
   border-radius: 20px;
 }
 
+.player {
+  text-align: center;
+}
+
+.update {
+  color: white;
+}
+
 .trap {
   background-color: rgba(255, 0, 0, 0.5);
+}
+
+.dicebox {
+  text-align: center;
+  margin: 15px;
+  color: white;
+}
+
+.dicebox button {
+  color: black;
+}
+
+.updates {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

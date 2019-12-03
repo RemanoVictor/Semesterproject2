@@ -1,6 +1,6 @@
 document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne");
 document.getElementById('player1').innerHTML += `<img src="${sessionStorage.getItem('icon')}">`;
-document.getElementById('result2').innerHTML+= sessionStorage.getItem("playerTwo");
+document.getElementById('result2').innerHTML += sessionStorage.getItem("playerTwo");
 document.getElementById('player2').innerHTML += `<img src="${sessionStorage.getItem('icon2')}">`;
 
 //Board Game
@@ -16,8 +16,7 @@ function rollDice() {
         playerTurn = playerTwo
     }
 
-    // if players share a tile
-    
+    // if players share a tile    
     if (playerOne.tileNum !== playerTwo.tileNum) {        
         document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
     } else {
@@ -30,12 +29,12 @@ function rollDice() {
         }
     }
     
-    let diceRoll =31; //(Math.floor(Math.random() * 6) + 1);
-    document.getElementById("rollOutput").innerHTML = " You rolled a " + diceRoll + " !";
+    let diceRoll =(Math.floor(Math.random() * 6) + 1);
+    document.getElementById("rollOutput").innerHTML = `${playerTurn.title}`+" rolled a " + diceRoll + " !";
 
     //dice mechanics
     if (diceRoll === 6) {
-        alert('You rolled a 6!');
+        alert(playerTurn.title + ' rolled a 6!');
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
         rollDice()
     } else {        
@@ -49,7 +48,7 @@ function rollDice() {
     switch(playerTurn.tileNum) {
         case  trapOne.tileNum:
             alert(trapOne.message);
-            document.getElementById("tile" + playerTurn.tileNum).innerHTML ="";
+            document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
             playerTurn.tileNum = playerTurn.tileNum - trapOne.penalty;
             document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                 <img src="${playerTurn.token}">
@@ -57,7 +56,7 @@ function rollDice() {
         break;
         case   trapTwo.tileNum:
                 alert(trapTwo.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML ="";
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapTwo.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                     <img src="${playerTurn.token}">
@@ -65,7 +64,7 @@ function rollDice() {
         break;
         case trapThree.tileNum:
                 alert(trapThree.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML ="";
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum + trapThree.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                     <img src="${playerTurn.token}">
@@ -73,7 +72,7 @@ function rollDice() {
         break;
         case trapFour.tileNum:
                 alert(trapThree.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML ="";
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapFour.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                     <img src="${playerTurn.token}">
@@ -81,7 +80,7 @@ function rollDice() {
         break;
         case trapFive.tileNum:
                 alert(trapThree.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML ="";
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapFive.penalty;            
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
                     <img src="${playerTurn.token}">
@@ -91,21 +90,20 @@ function rollDice() {
       }
     } setTrap();
 
-    if(playerTurn.tileNum === null){
-        alert('you win');
+    if( playerTurn.tileNum >= 30){        
+        alert(playerTurn.title + " is the winner! ");
+        window.location = "http://127.0.0.1:5500/winner.html";
     }
     
     //Switch players
-    if (playerTurn === playerOne) {
+    if (playerTurn === playerOne) {        
         document.getElementById('player1Update').innerHTML = "";
-        document.getElementById('player1Update').innerHTML += `<p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;
-        
+        document.getElementById('player1Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
         playerOne.turn = false;
         playerTwo.turn = true;
-    } else {
+    } else {        
         document.getElementById('player2Update').innerHTML = "";
-        document.getElementById('player2Update').innerHTML += `<p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
-        //document.getElementById('player2').innerHTML = "";
+        document.getElementById('player2Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
         playerTwo.turn = false;
         playerOne.turn = true;
     }

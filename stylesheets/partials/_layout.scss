@@ -4,18 +4,14 @@
     padding: 0;
 }
 
+img{
+    width: 100%;
+}
+
 .body{
     background-color: black;
 }
-.container-fluid{
-    //background-color: black;
-    margin-left: 5%;
-    
-}
 
-img{
-    width: 40%;
-}
 
 .navigation{
     position: relative;
@@ -28,8 +24,7 @@ img{
     & li{
         list-style-type: none;
         display: inline-block;
-    }
-    
+    }    
     & a{
         color: white;
     }

@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="[ body ]">
     <div class="[ navigation ]">
         <ul>
             <li><a href="index.html"> Home</a></li>
@@ -22,31 +22,63 @@
         </ul>
     </div>
 
-    <div class="[container]">
-        <div class="[ row ]">
-            <div class="[ col-sm-3 ]"id="player1" class="[ playerOne ]">
+    <div class="[ container ]">
+        <div class="[ row ]">  
+
+            <div class="[ player ][ col-md-2 ]" id="player1">                
+            </div>            
+            
+            <div class="[ update ][ col-md-2 ]" id="player1Update">
                 <h2 id="result"></h2>
             </div>
-
-            <div class="[ col-sm-2 ]" id="player1Update">
-                
-            </div>
-
-            <div class="[ col-sm-2 ]">
-                <p id="rollOutput"></p> 
-                <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>   
-            </div>
-
-            <div class="[ col-sm-2 ]" id="player2Update">
-                
-            </div>   
-            <div class="[ col-sm-3 ][ playerTwo ]" id="player2">
+            
+            <div class="[ col-md-4 ]"></div>
+            
+            <div class="[ update ][ col-md-2 ]" id="player2Update">
                 <h2 id="result2"></h2>
+            </div>            
+
+            <div class="[ player ][ col-md-2 ]" id="player2">                
             </div>
-        </div>     
+                                                                 
+        </div>    
+        <div class="[ row ][ updates ]">
+            <div class="[ col-md-4 ]"></div>
+            <div class="[ col-md-4 ][ dicebox ]">
+                    <p id="rollOutput"></p>
+                    <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>   
+            </div>
+            <div class="[ col-md-4 ]"></div>
+        </div>
     </div>              
 
     <div class="[ container-fluid ][ boardGame ]" id="boardGame">
+        <div class="[ row ]" style="display: none;">
+                <div id="tile26" class="[ col-sm-2 ][ tile ]">
+                        <p>36</p>
+                    </div>
+        
+                    <div id="tile35" class="[ col-sm-2 ][ tile ]">
+                        <p>35</p>
+                    </div>
+                    
+                    <div id="tile34" class="[ col-sm-2 ][ tile ]">
+                        <p>34</p>
+                    </div>
+        
+                    <div id="tile33" class="[ col-sm-2 ][ tile ]">
+                        <p>33</p>
+                    </div>
+        
+                    <div id="tile32" class="[ col-sm-2 ][ tile ]">
+                        <p>32</p>
+                    </div>
+        
+                    <div id="tile31" class="[ col-sm-2 ][ tile ]">
+                        <p>31</p>
+                    </div>  
+        </div>
+
         <div class="[ row ]">            
             <div id="tile25" class="[ col-sm-2 ][ tile ]">
                 <p>25</p>
@@ -64,11 +96,11 @@
                 <p>28</p>
             </div>
 
-            <div id="tile29" class="[ col-lg-2 ][ tile ][ trap ]">
+            <div id="tile29" class="[ col-sm-2 ][ tile ][ trap ]">
                 <p>29</p>
             </div>
 
-            <div id="tile30" class="[ col-lg-2 ][ tile ]">
+            <div id="tile30" class="[ col-sm-2 ][ tile ]">
                 <p>30</p>
             </div>        
         </div>
