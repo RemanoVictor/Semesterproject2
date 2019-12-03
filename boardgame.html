@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Document</title>
+    <title>GOS Board Game</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
 
 </head>
 
-<body class="[ body ]">
-    <div class="[ navigation ]">
+<body class="[ body ][ boardBody ]">
+    <div class="[ container-fluid ][ navigation ]">
         <ul>
-            <li><a href="index.html"> Home</a></li>
+            <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>
             <li><a href="characters.html">characters</a></li>
         </ul>
     </div>
+    
+<div class="[ container ]">
 
+    <div class="[ overlay ]"></div>
     <div class="[ container ]">
         <div class="[ row ]">  
 
@@ -44,10 +48,12 @@
         </div>    
         <div class="[ row ][ updates ]">
             <div class="[ col-md-4 ]"></div>
+
             <div class="[ col-md-4 ][ dicebox ]">
-                    <p id="rollOutput"></p>
-                    <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>   
+                <p id="rollOutput"></p>
+                <button class="[ dice ]" id="dice" onclick="rollDice()"> Roll Dice </button>
             </div>
+
             <div class="[ col-md-4 ]"></div>
         </div>
     </div>              
@@ -210,9 +216,16 @@
         </div>
 
         <div class="[ row ]">
-            <div id="tile0" class="[ col-sm-12 ][ tile ]"></div>
+            <div id="tile0" class="[ col-sm-12 ][ tile ][ start ]"></div>
         </div>
-    </div>    
+    </div> 
+</div>   
+
+<div class="[ footer ]">
+
+        <p> Designed and coded by RemanoVictor™® </p>
+    
+    </div>
     <script src="scripts/game.js"></script>
     <script src="scripts/store.js"></script>
     <script src="scripts/playerStorage.js"></script>

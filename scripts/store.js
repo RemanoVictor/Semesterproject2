@@ -28,7 +28,7 @@ const trapTwo={
 const trapThree={
     tileNum:17,
     penalty:5,
-    message:" A midget carries you 6 steps forward "
+    message:" A midget carries you 5 steps forward "
 }
 const trapFour={
     tileNum:24,

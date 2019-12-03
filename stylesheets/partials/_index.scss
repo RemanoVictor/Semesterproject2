@@ -17,6 +17,8 @@
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
         padding: 60px;
+        border-radius:5px;
+        margin-bottom: 30px;
         & h2{
             text-align: center;   
             font-size: 5em;
@@ -25,8 +27,24 @@
         & h3{
             text-align: center;   
         }
-        & p{
+        & ul li{
+            font-size: 1.2em;
+        }
+        & .content--button{
+            padding: 10px;
+            margin-left: 25%;
             text-align: center;
-        }        
+            background-color: transparent;
+            width: 50%;
+            border: none;
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+            & a{
+                color: #f1f1f1;
+            }
+            & a:hover{
+                font-size: 1.2em;
+            }
+        }
+       
       }
 }

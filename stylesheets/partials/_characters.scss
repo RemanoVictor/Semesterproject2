@@ -1,16 +1,30 @@
                             //characters
+
+.characterBody{
+    overflow-y: hidden;
+}
+
+
+.characterVid{    
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}                            
+                            
 .characters{
     margin-top: 50px;
-    background-color: rgba(000, 000, 000, 0.5);
     padding: 50px;
-    height: 50vh;
+    height: 50vh;    
 }
 
 .card{    
-    //margin: 10px;
     text-align: center;
     width: 100%;
     color: white;
+    transition: all .5s ease-in-out;
     & img{
         width: 100%;
         margin: 0;
@@ -24,8 +38,8 @@
     }
     & .card--body{
         text-align: left;
-        background-color: rgba(000, 000, 000, 0.8);
-        padding: 5px;
+        background-color: rgba(000, 000, 000, 0.5);
+        padding: 10px;
     }
     & .card--button{
         border: 1px solid black;
@@ -34,5 +48,9 @@
 
 .carousel-indicators{
     top: 110%;
+}
+
+.hero{
+    color: white;
 }
 

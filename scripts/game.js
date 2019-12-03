@@ -29,7 +29,7 @@ function rollDice() {
         }
     }
     
-    let diceRoll =(Math.floor(Math.random() * 6) + 1);
+    let diceRoll = (Math.floor(Math.random() * 6) + 1);
     document.getElementById("rollOutput").innerHTML = `${playerTurn.title}`+" rolled a " + diceRoll + " !";
 
     //dice mechanics
@@ -71,7 +71,7 @@ function rollDice() {
                 `;
         break;
         case trapFour.tileNum:
-                alert(trapThree.message);
+                alert(trapFour.message);
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapFour.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
@@ -79,7 +79,7 @@ function rollDice() {
                 `;
         break;
         case trapFive.tileNum:
-                alert(trapThree.message);
+                alert(trapFive.message);
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapFive.penalty;            
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
@@ -101,11 +101,15 @@ function rollDice() {
         document.getElementById('player1Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
         playerOne.turn = false;
         playerTwo.turn = true;
-    } else {        
+    } else {       
         document.getElementById('player2Update').innerHTML = "";
         document.getElementById('player2Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
         playerTwo.turn = false;
         playerOne.turn = true;
     }
+
+    
+
+    
 }
 

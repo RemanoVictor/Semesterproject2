@@ -1,21 +1,48 @@
-.boardGame{
-    border: 1px solid white;
-    //padding: 50px;
-    & img{
-        width: 40%;
-    }
-    & .tile{
-        border: 1px solid white;
-        color: white;
-        height: 10em;
-        width: 15%;
-        margin: 2px;
-        padding: 20px;
-        border-radius: 20px;
-    }
-    
+.boardBody{
+    background-image: url('/media/textures/boardgame_background.jpg');
+    background-position: center;
+    background-size: contain;
 }
 
+.details{
+    margin-bottom: 0;
+}
+
+.overlay{
+    background: rgba(000,000,000,0.7);
+    position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.boardGame{
+    margin:2% 0 0 10%;
+    padding: 5px;
+    
+    & img{
+        width: 45%;
+        height: 45%;
+    }
+    & .tile{
+        text-align: center;
+        border: 1px solid white;
+        color: white;
+        height: 5em;
+        width: 15%;
+        margin: 5px;
+        padding: 5px 0 ;
+        border-radius: 20px;
+    }    
+}
+
+.start{
+    display: none;
+    width: 100%;
+}
 
 .player{
     text-align: center;
@@ -25,15 +52,12 @@
     color: white;
 }
 
-
-
 .trap{
     background-color: rgba(255, 000, 000,0.5 );
 }
 
 .dicebox{
     text-align: center;
-    margin: 15px;
     color: white;
     & button{
         color: black;

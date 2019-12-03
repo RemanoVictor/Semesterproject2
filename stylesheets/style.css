@@ -14,7 +14,6 @@ img {
 }
 
 .navigation {
-  position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   padding: 20px;
@@ -27,10 +26,31 @@ img {
 .navigation li {
   list-style-type: none;
   display: inline-block;
+  margin: 0 20px;
+  font-size: 1.2em;
 }
 
 .navigation a {
   color: white;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.hvr-underline-from-center:before {
+  background: white !important;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 25vh;
+  padding: 50px;
+  bottom: 0;
+  margin-bottom: 0;
 }
 
 .backgroundVid {
@@ -49,6 +69,8 @@ img {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   padding: 60px;
+  border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 .welcome .content h2 {
@@ -61,13 +83,44 @@ img {
   text-align: center;
 }
 
-.welcome .content p {
+.welcome .content ul li {
+  font-size: 1.2em;
+}
+
+.welcome .content .content--button {
+  padding: 10px;
+  margin-left: 25%;
   text-align: center;
+  background-color: transparent;
+  width: 50%;
+  border: none;
+  -webkit-box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.welcome .content .content--button a {
+  color: #f1f1f1;
+}
+
+.welcome .content .content--button a:hover {
+  font-size: 1.2em;
+}
+
+.characterBody {
+  overflow-y: hidden;
+}
+
+.characterVid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
 .characters {
   margin-top: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 50px;
   height: 50vh;
 }
@@ -76,6 +129,8 @@ img {
   text-align: center;
   width: 100%;
   color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .card img {
@@ -94,8 +149,8 @@ img {
 
 .card .card--body {
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 .card .card--button {
@@ -106,22 +161,55 @@ img {
   top: 110%;
 }
 
+.hero {
+  color: white;
+}
+
+.boardBody {
+  background-image: url("/media/textures/boardgame_background.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+.details {
+  margin-bottom: 0;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 5%;
+  right: 0;
+  bottom: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 .boardGame {
-  border: 1px solid white;
+  margin: 2% 0 0 10%;
+  padding: 5px;
 }
 
 .boardGame img {
-  width: 40%;
+  width: 45%;
+  height: 45%;
 }
 
 .boardGame .tile {
+  text-align: center;
   border: 1px solid white;
   color: white;
-  height: 10em;
+  height: 5em;
   width: 15%;
-  margin: 2px;
-  padding: 20px;
+  margin: 5px;
+  padding: 5px 0;
   border-radius: 20px;
+}
+
+.start {
+  display: none;
+  width: 100%;
 }
 
 .player {
@@ -138,7 +226,6 @@ img {
 
 .dicebox {
   text-align: center;
-  margin: 15px;
   color: white;
 }
 
