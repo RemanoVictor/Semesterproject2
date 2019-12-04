@@ -1,5 +1,4 @@
 sessionStorage.clear();
-
 //fetch statement to get character details
 function callApi(name, id) {
     fetch('https://anapioficeandfire.com/api/characters/' + id)
@@ -17,8 +16,4 @@ function callApi(name, id) {
                 </div>
             `
         });
-
-        
-            
-        
 }
