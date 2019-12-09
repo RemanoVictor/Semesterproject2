@@ -1,11 +1,11 @@
-document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne");
-document.getElementById('player1').innerHTML += `<img src="${sessionStorage.getItem('icon')}">`;
-document.getElementById('result2').innerHTML += sessionStorage.getItem("playerTwo");
-document.getElementById('player2').innerHTML += `<img src="${sessionStorage.getItem('icon2')}">`;
+document.getElementById('result').innerHTML = sessionStorage.getItem("playerOne");
+document.getElementById('player1').innerHTML = `<img src="${sessionStorage.getItem('icon')}">`;
+document.getElementById('result2').innerHTML = sessionStorage.getItem("playerTwo");
+document.getElementById('player2').innerHTML = `<img src="${sessionStorage.getItem('icon2')}">`;
 //Board Game
 function rollDice() {
-    let playerTurn = {};
-    // board mechanics
+    // defining whos turn it is.
+    let playerTurn = {};    
     if (playerOne.turn === true) {
         playerTurn = playerOne;
     } else {
@@ -23,9 +23,8 @@ function rollDice() {
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerOne.token}"/>`;
         }
     }
-    let diceRoll = (Math.floor(Math.random() * 6) + 1);
-
-    //dice mechanics
+//dice mechanics
+    let diceRoll = (Math.floor(Math.random() * 6) + 1);    
     if (diceRoll === 6) {
         document.getElementById('diceNumber').innerHTML = `
          <img src="media/textures/diceroll/${diceRoll}.png">`;
@@ -42,6 +41,7 @@ function rollDice() {
             <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
         `;
     }
+    //trap mechanics
     function setTrap() {
         switch (playerTurn.tileNum) {
             case trapOne.tileNum:
@@ -107,13 +107,23 @@ function rollDice() {
         }
     }
     setTrap();
+    //define the winner & save data.
     if (playerTurn.tileNum >= 30) {
         Swal.fire({
             title: playerTurn.title + ' is the winner! ',
         })
-        setTimeout(function delay() {
+
+        if(playerOne.turn === true){
+            sessionStorage.setItem("winnerName", playerTurn.title);
+            sessionStorage.setItem("winner", 'playerOne');
             window.location = "http://127.0.0.1:5500/winner.html";
-        }, 5000);
+        }
+        else{
+            sessionStorage.setItem("winnerName", playerTurn.title);
+            sessionStorage.setItem("winner", 'playerTwo');
+            window.location = "http://127.0.0.1:5500/winner.html";
+        }
+        
     }
     //Switch players
     if (playerTurn === playerOne) {

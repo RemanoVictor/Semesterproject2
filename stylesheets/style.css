@@ -328,4 +328,60 @@ swal2-popup {
   width: 100%;
   margin-top: 5%;
 }
+
+.winnerBody {
+  background-image: url("/media/textures/dragon_background.jpg");
+}
+
+.winnerBody .congrats {
+  color: white;
+  margin-left: 18%;
+}
+
+.winnerBody .winnerBanner {
+  text-align: center;
+  padding: 2%;
+  color: white;
+}
+
+.winnerBody .winnerToken {
+  animation-name: winnerSpin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -moz-animation-name: winnerSpin;
+  -moz-animation-duration: 10000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-name: winnerSpin;
+  -webkit-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@keyframes winnerSpin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes winnerSpin {
+  100% {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+.winnerBody .winnerDetails {
+  font-size: 2.5em;
+}
+
+.winnerBody .winnerDescription {
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.winnerBody .winnerDetails {
+  font-size: 3em;
+}
 /*# sourceMappingURL=style.css.map */

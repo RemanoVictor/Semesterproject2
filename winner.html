@@ -10,10 +10,11 @@
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
 </head>
 
-<body>
+<body class="[ body ][ winnerBody ]">
+    <div class="[ overlay ]"></div>
     <div class="[ container-fluid ]">
         <div class="[ row ]">
             <div class="[ navigation ]">
@@ -24,25 +25,21 @@
         </div>
     </div>
 
-    <div class="[ container ]">        
+    <div class="[ container ]">     
         <div class="[ row ]">
-            <div class="[ col-md-4 ]"></div>
-            <div class="[ col-md-4 ]" class="[ winnerBanner ]" id="winnerBanner">
-                <div class="winnerToken" id="winnerToken"></div>
-                <p> Winner Token Goes here</p>
-                <div class="[ winnerDetails ]" id="winnerDetails">
-                    <p> Winner Details: name and alias? </p>
-                </div>
-                <p class="[ winnerDescription ]" id="winnerDescription">small message goes here. ie: bla bla has won or
-                    some shit like that.</p>
+            <div class="[ col-xs-4 ]"></div>
+
+            <div class="[ col-xs-4 ][ winnerBanner ]">
+                <div class="winnerToken" id="winnerToken"></div>                
+
+                <div class="[ winnerDetails ]" id="winnerDetails"></div>
+
+                <div class="[ winnerDescription ]" id="winnerDescription"></div>
+
+                <div class="[ col-xs-4 ]"></div>
             </div>
-            <div class="[ col-md-4 ]"></div>
         </div>
     </div>
-    <!--<script src="scripts/game.js"></script>>
-    <script src="scripts/playerStorage.js"></script>
-    <script src="scripts/winner.js"></script>
-    
-    
+    <script src="scripts/winner.js"></script>        
 </body>
 </html>
