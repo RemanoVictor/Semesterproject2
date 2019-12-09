@@ -15,7 +15,7 @@
 
 .welcome {
     .content {
-        margin-top: 5%;
+        margin-top: 2%;
         position: relative;
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
@@ -44,8 +44,7 @@
             margin-bottom: 2%;
             text-align: center;
             background-color: transparent;
-            width: 50%;
-            //border: none;
+            width: 50%;            
             transition: all .4s ease-in-out;
         }
         .content--button:hover {
@@ -56,10 +55,17 @@
         a {
             color: #f1f1f1;
         }
+        a:hover{
+            text-decoration: none;
+        }
+        .underline{
+            text-decoration: underline;            
+        }
     }
 }
 
 .musicIcon{
-    margin-bottom: -10%;   
-    width: 40%;   
+    margin-top: 10%;
+    margin-bottom: -5%;
+    width: 30%;
 }

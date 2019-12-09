@@ -88,7 +88,7 @@ swal2-popup {
 }
 
 .welcome .content {
-  margin-top: 5%;
+  margin-top: 2%;
   position: relative;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
@@ -137,9 +137,18 @@ swal2-popup {
   color: #f1f1f1;
 }
 
+.welcome .content a:hover {
+  text-decoration: none;
+}
+
+.welcome .content .underline {
+  text-decoration: underline;
+}
+
 .musicIcon {
-  margin-bottom: -10%;
-  width: 40%;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  width: 30%;
 }
 
 .characterContainer {
@@ -169,12 +178,19 @@ swal2-popup {
   z-index: -1;
 }
 
+.chooseYourCharacter {
+  color: white;
+  text-align: center;
+}
+
+.characterRowOne {
+  margin: 5% 0;
+}
+
 .card {
   text-align: center;
   width: 100%;
   color: white;
-  -webkit-box-shadow: 0 5px 10px white;
-          box-shadow: 0 5px 10px white;
 }
 
 .card img {
@@ -199,10 +215,10 @@ swal2-popup {
 
 .card .card--button {
   border: 1px solid white;
+  border-radius: 5px;
   padding: 5%;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  border-radius: 5px;
 }
 
 .card .card--button:hover {
@@ -210,15 +226,6 @@ swal2-popup {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #3a0202;
-}
-
-.chooseYourCharacter {
-  color: white;
-  text-align: center;
-}
-
-.characterRowOne {
-  margin: 5% 0;
 }
 
 .boardBody {
@@ -333,15 +340,16 @@ swal2-popup {
   background-image: url("/media/textures/dragon_background.jpg");
 }
 
-.winnerBody .congrats {
+.winnerBody .winnerDetails {
   color: white;
-  margin-left: 18%;
+  width: 100%;
 }
 
-.winnerBody .winnerBanner {
-  text-align: center;
-  padding: 2%;
-  color: white;
+.winnerBody .winnerDetails h2 {
+  margin-left: 10%;
+  font-size: 2.9em;
+  letter-spacing: 5px;
+  font-family: hodor,sans-serif;
 }
 
 .winnerBody .winnerToken {
@@ -372,16 +380,9 @@ swal2-popup {
   }
 }
 
-.winnerBody .winnerDetails {
-  font-size: 2.5em;
-}
-
 .winnerBody .winnerDescription {
-  width: 100%;
-  font-size: 1.1em;
-}
-
-.winnerBody .winnerDetails {
-  font-size: 3em;
+  margin-top: 5%;
+  color: white;
+  font-size: 1.8em;
 }
 /*# sourceMappingURL=style.css.map */

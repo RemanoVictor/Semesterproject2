@@ -1,48 +1,38 @@
 .winnerBody{
     background-image: url('/media/textures/dragon_background.jpg'); 
-    .congrats{
-        color: white;
-        margin-left: 18%;
-    }   
-    .winnerBanner{
-        text-align: center;
-        padding: 2%;
-        color: white;
-    }
-    .winnerToken{
-        animation-name: winnerSpin;
-        animation-duration: 10000ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        .winnerDetails{
+            color: white;
+            width: 100%;
+            h2{
+                margin-left: 10%;
+                font-size: 2.9em;
+                letter-spacing:5px;                
+                font-family: hodor,sans-serif;
+            }
+        }
+        .winnerToken{
+            animation-name: winnerSpin;
+            animation-duration: 10000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        
+            -moz-animation-name: winnerSpin;
+            -moz-animation-duration: 10000ms;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+        
+            -webkit-animation-name: winnerSpin;
+            -webkit-animation-duration: 10000ms;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
     
-        -moz-animation-name: winnerSpin;
-        -moz-animation-duration: 10000ms;
-        -moz-animation-iteration-count: infinite;
-        -moz-animation-timing-function: linear;
-    
-        -webkit-animation-name: winnerSpin;
-        -webkit-animation-duration: 10000ms;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-    }    
-    @keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
-    @-moz-keyframes winnerSpin { 100% { -moz-transform: rotateY(360deg); } }
-    @-webkit-keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); } }
-    .winnerDetails{
-        font-size: 2.5em;
-    }
-    .winnerDescription{    
-        font-size:1.1em;
-    }
-    .winnerDetails{
-        font-size: 3em;
-    }
-    
+            @keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+            @-moz-keyframes winnerSpin { 100% { -moz-transform: rotateY(360deg); } }
+            @-webkit-keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); } }
+        }  
+        .winnerDescription{
+            margin-top: 5%;
+            color: white;    
+            font-size:1.8em;
+        }
 }
-
-
-
-
-
-
-

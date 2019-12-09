@@ -1,16 +1,14 @@
-                            //characters
+//characters
 
-.characterContainer{
+.characterContainer {
     margin-bottom: 10%;
 }
 
-
-.characterBody{
+.characterBody {
     overflow-x: hidden;
 }
 
-
-.characterVid{    
+.characterVid {
     position: absolute;
     top: 0;
     right: 0;
@@ -19,56 +17,60 @@
     z-index: -1;
 }
 
-
-.characterPageOverlay{
-    background: rgba(000,000,000,0.7);
+.characterPageOverlay {
+    background: rgba(000, 000, 000, 0.7);
     position: absolute;
     top: 0;
     right: 0;
     min-width: 100%;
     min-height: 10%;
     z-index: -1;
-}                
+}
 
-.card{    
+.chooseYourCharacter {
+    color: white;
+    text-align: center;
+}
+
+.characterRowOne {
+    margin: 5% 0;
+}
+
+.card {
     text-align: center;
     width: 100%;
     color: white;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 1);    
-    & img{
+
+    & img {
         width: 100%;
         margin: 0;
     }
-    h2{
-        font-weight: bold;        
+
+    h2 {
+        font-weight: bold;
     }
-    button{
+
+    button {
         background-color: transparent;
         border: none;
     }
-    .card--body{
+
+    .card--body {
         text-align: left;
         background-color: rgba(000, 000, 000, 0.5);
         padding: 10px;
     }
-    .card--button{
+
+    .card--button {
         border: 1px solid white;
-        padding: 5%;        
-        transition: all .4s ease-in-out;
         border-radius: 5px;
+        padding: 5%;
+        transition: all .4s ease-in-out;
     }
-    .card--button:hover{
+
+    .card--button:hover {
         background-color: rgba(255, 255, 255, 0.5);
         transform: scale(1.1);
         color: rgb(58, 2, 2);
     }
-}
-
-.chooseYourCharacter{
-    color: white;
-    text-align: center;
-}
-
-.characterRowOne{
-    margin: 5% 0;
 }
