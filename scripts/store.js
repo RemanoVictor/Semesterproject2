@@ -1,10 +1,9 @@
 //players
-
 const playerOne={
     title:sessionStorage.getItem('playerOne'),
     tileNum:0,
     turn:true,
-    token:sessionStorage.getItem("icon") 
+    token:sessionStorage.getItem("icon")
 };
 
 const playerTwo={
@@ -13,7 +12,6 @@ const playerTwo={
     turn:false,
     token:sessionStorage.getItem("icon2")
 };
-           
 //traps
 const trapOne={
     tileNum:5,
