@@ -2,114 +2,133 @@ document.getElementById('result').innerHTML += sessionStorage.getItem("playerOne
 document.getElementById('player1').innerHTML += `<img src="${sessionStorage.getItem('icon')}">`;
 document.getElementById('result2').innerHTML += sessionStorage.getItem("playerTwo");
 document.getElementById('player2').innerHTML += `<img src="${sessionStorage.getItem('icon2')}">`;
-
 //Board Game
-
 function rollDice() {
-    
     let playerTurn = {};
-
     // board mechanics
     if (playerOne.turn === true) {
         playerTurn = playerOne;
     } else {
         playerTurn = playerTwo
     }
-
     // if players share a tile    
-    if (playerOne.tileNum !== playerTwo.tileNum) {        
+    if (playerOne.tileNum !== playerTwo.tileNum) {
         document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
     } else {
         if (playerOne.turn === true) {
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerTwo.token}"/>`;
-        } else {                        
+        } else {
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerOne.token}"/>`;
         }
     }
-    
     let diceRoll = (Math.floor(Math.random() * 6) + 1);
-    document.getElementById("rollOutput").innerHTML = `${playerTurn.title}`+" rolled a " + diceRoll + " !";
 
     //dice mechanics
     if (diceRoll === 6) {
-        alert(playerTurn.title + ' rolled a 6!');
+        document.getElementById('diceNumber').innerHTML = `
+         <img src="media/textures/diceroll/${diceRoll}.png">`;
+        Swal.fire({
+            title: playerTurn.title + ' rolled a six! ',
+        })
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
         rollDice()
-    } else {        
+    } else {
+        document.getElementById('diceNumber').innerHTML = `
+         <img src="media/textures/diceroll/${diceRoll}.png">`;
         playerTurn.tileNum = playerTurn.tileNum + diceRoll;
         document.getElementById('tile' + playerTurn.tileNum).innerHTML += `
-            <img src="${playerTurn.token}">
-        `;        
+            <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
+        `;
     }
-
-    function setTrap(){
-    switch(playerTurn.tileNum) {
-        case  trapOne.tileNum:
-            alert(trapOne.message);
-            document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
-            playerTurn.tileNum = playerTurn.tileNum - trapOne.penalty;
-            document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
-                <img src="${playerTurn.token}">
-            `;          
-        break;
-        case   trapTwo.tileNum:
-                alert(trapTwo.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
+    function setTrap() {
+        switch (playerTurn.tileNum) {
+            case trapOne.tileNum:
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
+                    <img src="${playerTurn.token}">
+                `;
+                Swal.fire({
+                    title: playerTurn.title + ' Landed on a trap! ',
+                    text: trapOne.message
+                })
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
+                playerTurn.tileNum = playerTurn.tileNum - trapOne.penalty;
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
+                <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
+            `;
+                break;
+            case trapTwo.tileNum:
+                Swal.fire({
+                    title: playerTurn.title + ' Landed on a trap! ',
+                    text: trapTwo.message
+                })
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapTwo.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
-                    <img src="${playerTurn.token}">
+                    <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
                 `;
-        break;
-        case trapThree.tileNum:
-                alert(trapThree.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
+                break;
+            case trapThree.tileNum:
+                Swal.fire({
+                    title: playerTurn.title + ' Landed on a trap! ',
+                    text: trapThree.message
+                })
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum + trapThree.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
-                    <img src="${playerTurn.token}">
+                    <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
                 `;
-        break;
-        case trapFour.tileNum:
-                alert(trapFour.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
+                break;
+            case trapFour.tileNum:
+                Swal.fire({
+                    title: playerTurn.title + ' Landed on a trap! ',
+                    text: trapFour.message
+                })
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
                 playerTurn.tileNum = playerTurn.tileNum - trapFour.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
-                    <img src="${playerTurn.token}">
+                    <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
                 `;
-        break;
-        case trapFive.tileNum:
-                alert(trapFive.message);
-                document.getElementById("tile" + playerTurn.tileNum).innerHTML =`<p>${playerTurn.tileNum}</p>`;
-                playerTurn.tileNum = playerTurn.tileNum - trapFive.penalty;            
+                break;
+            case trapFive.tileNum:
+                Swal.fire({
+                    title: playerTurn.title + ' Landed on a trap! ',
+                    text: trapFive.message,
+                    imgUrl: playerTurn.token
+                })
+                document.getElementById("tile" + playerTurn.tileNum).innerHTML = `<p>${playerTurn.tileNum}</p>`;
+                playerTurn.tileNum = playerTurn.tileNum - trapFive.penalty;
                 document.getElementById("tile" + playerTurn.tileNum).innerHTML += `
-                    <img src="${playerTurn.token}">
+                    <img src="${playerTurn.token}" class="[ animated fadeIn delay-3 ]">
                 `;
-        break;
-        default:          
-      }
-    } setTrap();
-
-    if( playerTurn.tileNum >= 30){        
-        alert(playerTurn.title + " is the winner! ");
-        window.location = "http://127.0.0.1:5500/winner.html";
+                break;
+            default:
+        }
     }
-    
+    setTrap();
+    if (playerTurn.tileNum >= 30) {
+        Swal.fire({
+            title: playerTurn.title + ' is the winner! ',
+        })
+        setTimeout(function delay() {
+            window.location = "http://127.0.0.1:5500/winner.html";
+        }, 5000);
+    }
     //Switch players
-    if (playerTurn === playerOne) {        
+    if (playerTurn === playerOne) {
+        document.getElementById('player2').style.border = "1px solid green";
+        document.getElementById('player1').style.border = "none";
         document.getElementById('player1Update').innerHTML = "";
-        document.getElementById('player1Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
+        document.getElementById('player1Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;
         playerOne.turn = false;
         playerTwo.turn = true;
-    } else {       
+    } else {
+        document.getElementById('player1').style.border = "1px solid green";
+        document.getElementById('player2').style.border = "none";
         document.getElementById('player2Update').innerHTML = "";
-        document.getElementById('player2Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;        
+        document.getElementById('player2Update').innerHTML += `<h2> ${playerTurn.title}</h2> <p> ${playerTurn.title} is on tile number:${playerTurn.tileNum}</p>`;
         playerTwo.turn = false;
         playerOne.turn = true;
     }
-
-    
-
-    
 }
-

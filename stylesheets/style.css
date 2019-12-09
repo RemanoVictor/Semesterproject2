@@ -11,6 +11,7 @@ img {
 
 .body {
   background-color: black;
+  font-family: josefin sans,sans-serif;
 }
 
 .navigation {
@@ -37,7 +38,6 @@ img {
 .navigation a:hover {
   text-decoration: none;
   color: white;
-  font-size: 1.2em;
 }
 
 .hvr-underline-from-center:before {
@@ -46,11 +46,36 @@ img {
 
 .footer {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 25vh;
-  padding: 50px;
-  bottom: 0;
-  margin-bottom: 0;
+  margin-top: 2%;
+  color: white;
+}
+
+swal2-popup {
+  display: none;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 50%;
+  max-width: 100%;
+  padding: 1.25em;
+  border: none;
+  border-radius: .3125em;
+  background: #fff;
+  font-family: inherit;
+  font-size: 1.2em !important;
+}
+
+.indexBody {
+  overflow-x: hidden;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .backgroundVid {
@@ -63,20 +88,18 @@ img {
 }
 
 .welcome .content {
-  margin-top: 10%;
+  margin-top: 5%;
   position: relative;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
-  padding: 60px;
+  padding: 6%;
   border-radius: 5px;
-  margin-bottom: 30px;
 }
 
-.welcome .content h2 {
+.welcome .content h1 {
   text-align: center;
   font-size: 5em;
-  font-family: blackchancery, sans-serif;
+  font-family: Hodor, sans-serif;
 }
 
 .welcome .content h3 {
@@ -84,30 +107,47 @@ img {
 }
 
 .welcome .content ul li {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .welcome .content .content--button {
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.4em;
   padding: 10px;
   margin-left: 25%;
+  margin-bottom: 2%;
   text-align: center;
   background-color: transparent;
   width: 50%;
-  border: none;
-  -webkit-box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
-          box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.welcome .content .content--button a {
+.welcome .content .content--button:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-weight: bolder;
+}
+
+.welcome .content a {
   color: #f1f1f1;
 }
 
-.welcome .content .content--button a:hover {
-  font-size: 1.2em;
+.musicIcon {
+  margin-bottom: -10%;
+  width: 40%;
+}
+
+.characterContainer {
+  margin-bottom: 10%;
 }
 
 .characterBody {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .characterVid {
@@ -115,22 +155,26 @@ img {
   top: 0;
   right: 0;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 20%;
   z-index: -1;
 }
 
-.characters {
-  margin-top: 50px;
-  padding: 50px;
-  height: 50vh;
+.characterPageOverlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 10%;
+  z-index: -1;
 }
 
 .card {
   text-align: center;
   width: 100%;
   color: white;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0 5px 10px white;
+          box-shadow: 0 5px 10px white;
 }
 
 .card img {
@@ -154,15 +198,27 @@ img {
 }
 
 .card .card--button {
-  border: 1px solid black;
+  border: 1px solid white;
+  padding: 5%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border-radius: 5px;
 }
 
-.carousel-indicators {
-  top: 110%;
+.card .card--button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #3a0202;
 }
 
-.hero {
+.chooseYourCharacter {
   color: white;
+  text-align: center;
+}
+
+.characterRowOne {
+  margin: 5% 0;
 }
 
 .boardBody {
@@ -176,13 +232,13 @@ img {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 5%;
+  top: 0;
   right: 0;
   bottom: 0%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 102%;
   z-index: -1;
 }
 
@@ -192,19 +248,24 @@ img {
 }
 
 .boardGame img {
-  width: 45%;
-  height: 45%;
+  margin-top: -10px;
+  width: 47%;
+  height: 50px;
 }
 
 .boardGame .tile {
-  text-align: center;
   border: 1px solid white;
   color: white;
-  height: 5em;
+  height: 4.5em;
   width: 15%;
   margin: 5px;
-  padding: 5px 0;
+  padding-bottom: 2% 0;
   border-radius: 20px;
+}
+
+.boardGame .tile p {
+  margin: 0;
+  padding: 0;
 }
 
 .start {
@@ -214,26 +275,57 @@ img {
 
 .player {
   text-align: center;
+  border-radius: 20px;
 }
 
 .update {
+  margin: 0;
   color: white;
 }
 
+.update h2 {
+  margin: 0;
+}
+
+.update p {
+  margin-top: 10%;
+  padding: 0;
+}
+
 .trap {
+  background-image: url("/media/skull-crossbones-icon-0.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-color: rgba(255, 0, 0, 0.5);
 }
 
 .dicebox {
+  margin: 0;
   text-align: center;
-  color: white;
 }
 
-.dicebox button {
+.dicebox .dice {
+  background-color: black;
+  color: white;
+  padding: 2%;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+
+.dicebox .dice:hover {
+  background-color: white;
   color: black;
 }
 
-.updates {
-  text-align: center;
+.dicebox img {
+  color: white;
+  width: 30%;
+  height: 30%;
+}
+
+.dicebox .diceNumber {
+  width: 100%;
+  margin-top: 5%;
 }
 /*# sourceMappingURL=style.css.map */

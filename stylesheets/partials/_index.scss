@@ -1,5 +1,9 @@
-//background video
+.indexBody{
+    overflow-x: hidden;
+    animation-duration: 2s;
+}
 
+//background video
 .backgroundVid {
     position: absolute;
     right: 0;
@@ -7,44 +11,55 @@
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-  }
+}
 
-.welcome{
-    & .content {
-        margin-top: 10%;
+.welcome {
+    .content {
+        margin-top: 5%;
         position: relative;
-        bottom: 0;
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
-        padding: 60px;
-        border-radius:5px;
-        margin-bottom: 30px;
-        & h2{
-            text-align: center;   
+        padding: 6%;
+        border-radius: 5px;
+        h1 {
+            text-align: center;
             font-size: 5em;
-            font-family: blackchancery, sans-serif;
-        }        
-        & h3{
-            text-align: center;   
+            font-family: Hodor, sans-serif;
         }
-        & ul li{
-            font-size: 1.2em;
+        h3 {
+            text-align: center;
         }
-        & .content--button{
+        ul {
+            li {
+                font-size: 1.5em;
+            }
+        }
+        .content--button {
+            border:1px solid;
+            border-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1.4em;
             padding: 10px;
             margin-left: 25%;
+            margin-bottom: 2%;
             text-align: center;
             background-color: transparent;
             width: 50%;
-            border: none;
-            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
-            & a{
-                color: #f1f1f1;
-            }
-            & a:hover{
-                font-size: 1.2em;
-            }
+            //border: none;
+            transition: all .4s ease-in-out;
         }
-       
-      }
+        .content--button:hover {
+            box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+            font-weight: bolder;
+        }
+        a {
+            color: #f1f1f1;
+        }
+    }
+}
+
+.musicIcon{
+    margin-bottom: -10%;   
+    width: 40%;   
 }

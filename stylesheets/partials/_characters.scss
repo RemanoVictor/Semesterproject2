@@ -1,7 +1,12 @@
                             //characters
 
+.characterContainer{
+    margin-bottom: 10%;
+}
+
+
 .characterBody{
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -10,47 +15,60 @@
     top: 0;
     right: 0;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 20%;
     z-index: -1;
-}                            
-                            
-.characters{
-    margin-top: 50px;
-    padding: 50px;
-    height: 50vh;    
 }
+
+
+.characterPageOverlay{
+    background: rgba(000,000,000,0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 10%;
+    z-index: -1;
+}                
 
 .card{    
     text-align: center;
     width: 100%;
     color: white;
-    transition: all .5s ease-in-out;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 1);    
     & img{
         width: 100%;
         margin: 0;
     }
-    & h2{
+    h2{
         font-weight: bold;        
     }
-    & button{
+    button{
         background-color: transparent;
         border: none;
     }
-    & .card--body{
+    .card--body{
         text-align: left;
         background-color: rgba(000, 000, 000, 0.5);
         padding: 10px;
     }
-    & .card--button{
-        border: 1px solid black;
+    .card--button{
+        border: 1px solid white;
+        padding: 5%;        
+        transition: all .4s ease-in-out;
+        border-radius: 5px;
+    }
+    .card--button:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.1);
+        color: rgb(58, 2, 2);
     }
 }
 
-.carousel-indicators{
-    top: 110%;
-}
-
-.hero{
+.chooseYourCharacter{
     color: white;
+    text-align: center;
 }
 
+.characterRowOne{
+    margin: 5% 0;
+}

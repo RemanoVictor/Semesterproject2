@@ -1,14 +1,14 @@
 sessionStorage.clear();
 
 //fetch statement to get character details
-function callApi(name, id) {
+function callApi(name, id) {           
     fetch('https://anapioficeandfire.com/api/characters/' + id)
         .then((response) => {
             return response.json();
         })
-        .then((data) => {
+        .then((data) => {                        
             document.getElementById("card" + name).innerHTML += `
-                <div class="[ card--body ]">
+                <div class="[ card--body ]" id="cardBody">
                     <h3>Name: ${data.name}</h3>
                     <p>Gender: ${data.gender}</p>
                     <p>Alias: ${data.aliases[0]}</p>
@@ -16,9 +16,18 @@ function callApi(name, id) {
                     <button class="[ card--button ]" onclick="saveChar('${name}')">Select Character</button>
                 </div>
             `
-        });
-
-        
-            
-        
+        });                   
 }
+
+
+
+
+
+
+    
+                  
+
+
+
+
+

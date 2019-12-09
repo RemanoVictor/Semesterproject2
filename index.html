@@ -11,20 +11,36 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 
 </head>
 
-<body class="[ body ][ animated fadeIn delay-1s ]">
-    <div class="[ container-fluid ]">     
+<body class="[ body ][ indexBody ][ animated fadeIn delay-0.7s ]">
+    <div class="[ container-fluid ]">
         <div class="[ row ]">
-        <div class="[ navigation ]">
-            <ul>
-                <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>                           
-            </ul>
-        </div>        
+            <div class="[ navigation ]">
+                <ul>
+                    <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
+    <div class="[ container ]">
+        <div class="[ row ]">
+            <div class="[ col-md-11 ]"></div>
+            <div class="[ col-md-1 ]" id="musicContainer">
+                <div id="muteIcon" class="[ musicIcon ]">
+                    <img src="media/unmuted.png" onclick="silence()">
+                </div>
+                <audio id=backgroundMusic style="display: none;"
+                src="media/audio/G-OH-T.mp3" 
+                autoplay="true"
+                muted                          
+                >
+            </div>
+        </div>
     </div>
 
     <div class="[ row ]">
@@ -36,7 +52,7 @@
             <div class="[ container ][ content ]">
                 <div class="[ row ]">
                     <div class="[ col-md-12 ]">
-                        <h2>Game  of  Scones </h2>
+                        <h1>Game <span class="underline">o</span>f Scones </h1>
                     </div>
                 </div>
 
@@ -48,7 +64,8 @@
                         <li>Finish first</li>
                     </ul>
                 </div>
-                <button class="[ content--button ]"><a href="characters.html"> Next Page</a></button>
+                <button class="[ content--button ]"><a href="characters.html" class="[ animated fadeIn delay-0.7s ]">
+                        Next Page</a></button>
             </div>
         </div>
     </div>
@@ -58,6 +75,7 @@
         <p> Designed and coded by RemanoVictor™® </p>
 
     </div>
+    <script src="scripts/music.js"></script>
 </body>
 
 </html>

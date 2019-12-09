@@ -11,30 +11,30 @@ img{
 }
 
 .body{
-    background-color: black;
+    background-color: black;    
+    font-family: josefin sans,sans-serif;
 }
 
 .navigation{
     background-color:rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 20px;
-    & ul{        
-        margin: 0;
-    }
-    & li{
-        list-style-type: none;
-        display: inline-block;
-        margin:0 20px;
-        font-size: 1.2em;
-    }
-    a{
-        color: white;      
-    }
-    & a:hover{
-        text-decoration: none;
-        color: white;
-        font-size:1.2em;
-    }
+        ul{        
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin:0 20px;
+            font-size: 1.2em;
+        }
+        a{
+            color: white;      
+        }
+        a:hover{
+            text-decoration: none;
+            color: white;            
+        }
 } 
 .hvr-underline-from-center:before{
     background:white !important;
@@ -42,11 +42,27 @@ img{
 
 .footer{
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 25vh;
-    padding: 50px;
-    bottom: 0;
-    margin-bottom: 0;
+    margin-top: 2%;
+    color: white;
+}
+
+swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 50%;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1.2em!important;
 }
 
 

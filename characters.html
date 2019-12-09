@@ -9,158 +9,140 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
 </head>
 
-<body class="[ body ][ characterBody ]">
-    <div class="[ row ]">
-        <div class="[ navigation ]">
-            <ul>
-                <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>        
-            </ul>
+<body class="[ body ][ characterBody ][ animated fadeIn delay-1.2s ]">
+    <div class="[ container-fluid ]">
+        <div class="[ row ]">
+            <div class="[ navigation ]">
+                <ul>
+                    <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="[ row ]">
+            <div class="[ characterPageOverlay ]"></div>
+            <video autoplay muted loop class="[ characterVid ]">
+                <source src="media/videos/Smoke - 306.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 
-    <div class="[ row ]">
-            <div class="[ overlay ]"></div>
-        <video autoplay muted loop class="[ characterVid ]">
-            <source src="media/videos/Smoke - 306.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="[ container ][ hero ]">
-            <div class="[ row ]">
-                <div class="[ col-lg-4 ]"></div>
-                <div class="[ col-lg-4 ]">
-                    <h2> Choose Your Character</h2>                    
-                </div>
-                <div class="[ col-lg-4 ]"></div>
+    <div class="[ container ][ chooseYourCharacter ]">
+        <div class="[ row ]">
+            <div class="[ col-lg-4 ]"></div>
+            <div class="[ col-lg-4 ]">
+                <h2> Choose Your Character</h2>
             </div>
-    </div>
-    
-
-    <div class="[ row ][ characters ]">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">j
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ol>
-
-            <div class="[ carousel-inner ]">
-                <div class="[ item ] [ active ]">
-                    <div class="[ col-md-1 ]"></div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardJon">
-                            <button onclick="callApi('Jon',583)">
-                                <img class="[ card--img ]" src="media/tokens/jon.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardTyrion">
-                            <button onclick="callApi('Tyrion',1052)">
-                                <img class="[ card--img ]" src="media/tokens/tyrion.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardGregor">
-                            <button onclick="callApi('Gregor',1442)">
-                                <img class="[ card--img ]" src="media/tokens/gregor.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardGilly">
-                            <button onclick="callApi('Gilly',1427)">
-                                <img class="[ card--img ]" src="media/tokens/gilly.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardSam">
-                            <button onclick="callApi('Sam',954)">
-                                <img class="[ card--img ]" src="media/tokens/sam.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-1 ]"></div>
-                </div>
-
-                <div class="[ item ]">
-
-                    <div class="[ col-md-1 ]"></div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardGreyworm">
-                            <button onclick="callApi('Greyworm',1445)">
-                                <img class="[ card--img ]" src="media/tokens/Greyworm.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardEuron">
-                            <button onclick="callApi('Euron',385)">
-                                <img class="[ card--img ]" src="media/tokens/Euron.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardArya">
-                            <button onclick="callApi('Arya',148)">
-                                <img class="[ card--img ]" src="media/tokens/arya.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardDaenarys">
-                            <button onclick="callApi('Daenarys',271)">
-                                <img class="[ card--img ]" src="media/tokens/daenarys.svg">
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="[ col-md-2 ]">
-                        <div class="[ card ][ hvr-float ]" id="cardBrienne">
-                            <button onclick="callApi('Brienne',216)">
-                                <img class="[ card--img ]" src="media/tokens/brienne.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="[ col-md-1 ]"></div>
-            </div>
-
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="[ col-lg-4 ]"></div>
         </div>
-    </div>   
+    </div>
+
+    <div class="[ container ][ characterContainer ]">
+        <div class="[ row ][ characterRowOne ]">
+            <div class="[ col-md-1 ]"></div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardJon">
+                    <button onclick="callApi('Jon',583)">
+                        <img class="[ card--img ]" src="media/tokens/jon.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardTyrion">
+                    <button onclick="callApi('Tyrion',1052)">
+                        <img class="[ card--img ]" src="media/tokens/tyrion.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardGregor">
+                    <button onclick="callApi('Gregor',1442)">
+                        <img class="[ card--img ]" src="media/tokens/gregor.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardGilly">
+                    <button onclick="callApi('Gilly',1427)">
+                        <img class="[ card--img ]" src="media/tokens/gilly.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardSam">
+                    <button onclick="callApi('Sam',954)">
+                        <img class="[ card--img ]" src="media/tokens/sam.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-1 ]"></div>
+        </div>
+
+        <div class="[ row ][ characterRowTwo ]">
+            <div class="[ col-md-1 ]"></div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardGreyworm">
+                    <button onclick="callApi('Greyworm',1445)">
+                        <img class="[ card--img ]" src="media/tokens/Greyworm.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardEuron">
+                    <button onclick="callApi('Euron',385)">
+                        <img class="[ card--img ]" src="media/tokens/Euron.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardArya">
+                    <button onclick="callApi('Arya',148)">
+                        <img class="[ card--img ]" src="media/tokens/arya.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardDaenarys">
+                    <button onclick="callApi('Daenarys',271)">
+                        <img class="[ card--img ]" src="media/tokens/daenarys.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="[ col-md-2 ]">
+                <div class="[ card ][ hvr-float ]" id="cardBrienne">
+                    <button onclick="callApi('Brienne',216)">
+                        <img class="[ card--img ]" src="media/tokens/brienne.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="[ col-md-1 ]"></div>
+    </div>
 
     <div class="[ footer ]">
 
         <p> Designed and coded by RemanoVictor™® </p>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>    
+    <script src="scripts/characterFetch.js"></script>
     <script src="scripts/playerStorage.js"></script>
 </body>
 
