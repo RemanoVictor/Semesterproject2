@@ -5,13 +5,18 @@
   padding: 0;
 }
 
-img {
-  width: 100%;
+button {
+  background-color: transparent;
+  border: none;
 }
 
 .body {
   background-color: black;
-  font-family: josefin sans,sans-serif;
+  font-family: josefin sans, sans-serif;
+}
+
+img {
+  width: 100%;
 }
 
 .navigation {
@@ -50,26 +55,8 @@ img {
   color: white;
 }
 
-swal2-popup {
-  display: none;
-  position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 50%;
-  max-width: 100%;
-  padding: 1.25em;
-  border: none;
-  border-radius: .3125em;
-  background: #fff;
-  font-family: inherit;
-  font-size: 1.2em !important;
+.swal2-content {
+  font-size: 2em;
 }
 
 .indexBody {
@@ -151,6 +138,21 @@ swal2-popup {
   width: 30%;
 }
 
+.modal {
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+}
+
 .characterContainer {
   margin-bottom: 10%;
 }
@@ -209,7 +211,7 @@ swal2-popup {
 
 .card .card--body {
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
 }
 
@@ -381,8 +383,35 @@ swal2-popup {
 }
 
 .winnerBody .winnerDescription {
-  margin-top: 5%;
   color: white;
   font-size: 1.8em;
+}
+
+.newGame {
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.4em;
+  padding: 10px;
+  text-align: center;
+  background-color: transparent;
+  width: 100%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.newGame a {
+  color: white;
+}
+
+.newGame a:hover {
+  color: white;
+}
+
+.newGame:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-weight: bolder;
 }
 /*# sourceMappingURL=style.css.map */
