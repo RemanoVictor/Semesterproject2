@@ -128,7 +128,7 @@ img {
   text-decoration: none;
 }
 
-.welcome .content .underline {
+.underline {
   text-decoration: underline;
 }
 
@@ -136,21 +136,6 @@ img {
   margin-top: 10%;
   margin-bottom: -5%;
   width: 30%;
-}
-
-.modal {
-  display: none;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.modal-content {
-  margin: 10% auto;
-  padding: 20px;
-  width: 80%;
 }
 
 .characterContainer {
@@ -183,6 +168,9 @@ img {
 .chooseYourCharacter {
   color: white;
   text-align: center;
+  font-size: 2.5em;
+  font-family: hodor,sans-serif;
+  letter-spacing: 5px;
 }
 
 .characterRowOne {
@@ -201,16 +189,17 @@ img {
 }
 
 .card h2 {
+  font-size: 2em;
   font-weight: bold;
+  font-family: hodor,sans-serif;
+  letter-spacing: 5px;
 }
 
-.card button {
-  background-color: transparent;
-  border: none;
+.card p {
+  font-size: 1.5em;
 }
 
 .card .card--body {
-  text-align: left;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 10px;
 }
@@ -218,7 +207,7 @@ img {
 .card .card--button {
   border: 1px solid white;
   border-radius: 5px;
-  padding: 5%;
+  padding: 3%;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -228,6 +217,24 @@ img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #3a0202;
+}
+
+.characterModal {
+  display: none;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+.characterModal .characterDetails {
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
 }
 
 .boardBody {
@@ -305,7 +312,7 @@ img {
   background-image: url("/media/skull-crossbones-icon-0.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .dicebox {
@@ -351,7 +358,7 @@ img {
   margin-left: 10%;
   font-size: 2.9em;
   letter-spacing: 5px;
-  font-family: hodor,sans-serif;
+  font-family: hodor, sans-serif;
 }
 
 .winnerBody .winnerToken {

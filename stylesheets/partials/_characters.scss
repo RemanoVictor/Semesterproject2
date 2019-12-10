@@ -30,6 +30,10 @@
 .chooseYourCharacter {
     color: white;
     text-align: center;
+    font-size: 2.5em;
+    font-family: hodor,sans-serif;
+    letter-spacing: 5px;
+
 }
 
 .characterRowOne {
@@ -41,30 +45,29 @@
     width: 100%;
     color: white;
 
-    & img {
+    img {
         width: 100%;
         margin: 0;
     }
 
     h2 {
+        font-size: 2em;
         font-weight: bold;
+        font-family: hodor,sans-serif;
+        letter-spacing: 5px;
     }
-
-    button {
-        background-color: transparent;
-        border: none;
+    p{
+        font-size: 1.5em;
     }
-
     .card--body {
-        text-align: left;
         background-color: rgba(000, 000, 000, 0.9);
-        padding: 10px;
+        padding: 10px;        
     }
 
-    .card--button {
+    .card--button {        
         border: 1px solid white;
         border-radius: 5px;
-        padding: 5%;
+        padding: 3%;
         transition: all .4s ease-in-out; 
     }
 
@@ -72,5 +75,22 @@
         background-color: rgba(255, 255, 255, 0.5);
         transform: scale(1.1);
         color: rgb(58, 2, 2);
-    }
+    }        
 }
+.characterModal {
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;   
+    position: fixed; 
+    overflow: auto;
+    .characterDetails {    
+        margin: 10% auto;
+        padding: 20px;
+        width: 80%;
+        text-align: center;
+    }
+  }
+ 

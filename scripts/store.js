@@ -35,6 +35,6 @@ const trapFour={
 }
 const trapFive={
     tileNum:29,
-    penalty:10,
-    message:" You attended the Red Wedding. move back 10 paces "
+    penalty:20,
+    message:" You attended the Red Wedding. move back 16 paces "
 }

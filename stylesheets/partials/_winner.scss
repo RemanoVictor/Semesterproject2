@@ -1,54 +1,71 @@
-.winnerBody{
-    background-image: url('/media/textures/dragon_background.jpg'); 
-        .winnerDetails{
-            color: white;
-            width: 100%;
-            h2{
-                margin-left: 10%;
-                font-size: 2.9em;
-                letter-spacing:5px;                
-                font-family: hodor,sans-serif;
+.winnerBody {
+    background-image: url('/media/textures/dragon_background.jpg');
+    .winnerDetails {
+        color: white;
+        width: 100%;
+
+        h2 {
+            margin-left: 10%;
+            font-size: 2.9em;
+            letter-spacing: 5px;
+            font-family: hodor, sans-serif;
+        }
+    }
+    .winnerToken {
+        animation-name: winnerSpin;
+        animation-duration: 10000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        -moz-animation-name: winnerSpin;
+        -moz-animation-duration: 10000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: linear;
+
+        -webkit-animation-name: winnerSpin;
+        -webkit-animation-duration: 10000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+
+        @keyframes winnerSpin {
+            100% {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
             }
         }
-        .winnerToken{
-            animation-name: winnerSpin;
-            animation-duration: 10000ms;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        
-            -moz-animation-name: winnerSpin;
-            -moz-animation-duration: 10000ms;
-            -moz-animation-iteration-count: infinite;
-            -moz-animation-timing-function: linear;
-        
-            -webkit-animation-name: winnerSpin;
-            -webkit-animation-duration: 10000ms;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-    
-            @keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
-            @-moz-keyframes winnerSpin { 100% { -moz-transform: rotateY(360deg); } }
-            @-webkit-keyframes winnerSpin { 100% { -webkit-transform: rotateY(360deg); } }
-        }  
-        .winnerDescription{            
-            color: white;    
-            font-size:1.8em;
-        }
-}
 
-.newGame{
-    border:1px solid;
+        @-moz-keyframes winnerSpin {
+            100% {
+                -moz-transform: rotateY(360deg);
+            }
+        }
+
+        @-webkit-keyframes winnerSpin {
+            100% {
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+    }
+    .winnerDescription {
+        color: white;
+        font-size: 1.8em;
+    }
+}
+.newGame {
+    border: 1px solid;
     border-color: rgba(255, 255, 255, 0.2);
     font-size: 1.4em;
     padding: 10px;
     text-align: center;
     background-color: transparent;
-    width: 100%;            
-    transition: all .4s ease-in-out;    
-    a{
+    width: 100%;
+    transition: all .4s ease-in-out;
+
+    a {
         color: white;
     }
-    a:hover{
+
+    a:hover {
         color: white;
     }
 }

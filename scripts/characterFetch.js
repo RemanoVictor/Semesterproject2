@@ -1,7 +1,7 @@
 sessionStorage.clear();
 
 // When the user clicks on the button, open the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("characterModal");
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -10,11 +10,13 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
 function openModal() {
   modal.style.display = "block";
 }
 
+function closeModal() {
+  modal.style.display = "none";
+}
 //fetch statement to get character details
 function callApi(name, id) {
   openModal()
@@ -25,7 +27,7 @@ function callApi(name, id) {
     .then((data) => {
       document.getElementById("card").innerHTML = `
                 <div class="[ card--body ]" id="cardBody">
-                    <h3>Name: ${data.name}</h3>
+                    <h2 class="[ playerName ]">Name: ${data.name}</h2>
                     <p>Gender: ${data.gender}</p>
                     <p>Alias: ${data.aliases[0]}</p>
                     <p>Date Of Birth: ${data.born}</p>

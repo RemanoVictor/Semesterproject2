@@ -1,5 +1,6 @@
 let count = 0;
 function saveChar(name){
+    closeModal();
     if(count === 0){        
         sessionStorage.setItem("playerOne", name);
         sessionStorage.setItem("icon",'/media/tokens/'+ name +'.svg');        
