@@ -1,7 +1,7 @@
 sessionStorage.clear();
 
 // When the user clicks on the button, open the modal
-var modal = document.getElementById("characterModal");
+const modal = document.getElementById("characterModal");
 
 
 // When the user clicks anywhere outside of the modal, close it

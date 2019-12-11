@@ -4,7 +4,7 @@ function saveChar(name){
     if(count === 0){        
         sessionStorage.setItem("playerOne", name);
         sessionStorage.setItem("icon",'/media/tokens/'+ name +'.svg');
-        document.getElementById(name).setAttribute("class","[ animated flipOutY");        
+        document.getElementById(name).setAttribute("class","[ animated flipOutY ]");        
         count ++;
     }
     else{        

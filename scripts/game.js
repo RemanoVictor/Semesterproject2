@@ -114,12 +114,12 @@ function rollDice() {
         })
 
         if(playerOne.turn === true){
-            sessionStorage.setItem("winnerName", playerTurn.title);
+            sessionStorage.setItem("winnerTitle", playerTurn.title);
             sessionStorage.setItem("winner", 'playerOne');
             window.location = "http://127.0.0.1:5500/winner.html";
         }
         else{
-            sessionStorage.setItem("winnerName", playerTurn.title);
+            sessionStorage.setItem("winnerTitle", playerTurn.title);
             sessionStorage.setItem("winner", 'playerTwo');
             window.location = "http://127.0.0.1:5500/winner.html";
         }
