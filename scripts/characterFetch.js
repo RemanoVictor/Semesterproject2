@@ -1,12 +1,8 @@
 sessionStorage.clear();
-
-// When the user clicks on the button, open the modal
 const modal = document.getElementById("characterModal");
-
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
 }
@@ -26,13 +22,13 @@ function callApi(name, id) {
     })
     .then((data) => {
       document.getElementById("card").innerHTML = `
-                <div class="[ card--body ]" id="cardBody">
-                    <h2 class="[ playerName ]">Name: ${data.name}</h2>
-                    <p>Gender: ${data.gender}</p>
-                    <p>Alias: ${data.aliases[0]}</p>
-                    <p>Date Of Birth: ${data.born}</p>
-                    <button class="[ card--button ]" onclick="saveChar('${name}')">Select Character</button>
-                </div>
-            `
+        <div class="[ card--body ]" id="cardBody">
+            <h2 class="[ playerName ]">Name: ${data.name}</h2>
+            <p>Gender: ${data.gender}</p>
+            <p>Alias: ${data.aliases[0]}</p>
+            <p>Date Of Birth: ${data.born}</p>
+            <button class="[ card--button ]" onclick="saveChar('${name}')">Select Character</button>
+        </div>
+    `
     });
 }

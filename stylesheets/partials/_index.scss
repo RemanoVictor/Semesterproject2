@@ -1,9 +1,9 @@
-.indexBody{
+.indexBody {
     overflow-x: hidden;
     animation-duration: 2s;
 }
 
-//background video
+
 .backgroundVid {
     position: absolute;
     right: 0;
@@ -20,52 +20,73 @@
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
         padding: 6%;
-        border-radius: 5px;
+
         h1 {
             text-align: center;
             font-size: 5em;
             font-family: Hodor, sans-serif;
         }
+
         h3 {
             text-align: center;
         }
+
         ul {
             li {
+                list-style-type: none;
                 font-size: 1.5em;
             }
         }
+
         .content--button {
-            border:1px solid;
+            border: 1px solid;
             border-color: rgba(255, 255, 255, 0.2);
-            color: white;
             font-size: 1.4em;
             padding: 10px;
             margin-left: 25%;
             margin-bottom: 2%;
             text-align: center;
-            background-color: transparent;
-            width: 50%;            
+            background-color: white;
+            width: 50%;
             transition: all .4s ease-in-out;
         }
+
         .content--button:hover {
+            color: white;
             box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
             transform: scale(1.1);
             font-weight: bolder;
         }
+
         a {
-            color: #f1f1f1;
+            font-weight: bold;
+            color: #000;
         }
-        a:hover{
+
+        a:hover {
+            font-weight: bolder;
             text-decoration: none;
-        }        
+        }
+
+        .gameLogo {
+            margin-left: -45%;
+        }
     }
-}
-.underline{
-    text-decoration: underline;            
+
 }
 
-.musicIcon{
+.underline {
+    text-decoration: underline;
+}
+
+.musicIcon {
     margin-top: 10%;
     margin-bottom: -5%;
     width: 30%;
+    transition: all .4s ease-in-out;
+}
+
+.musicIcon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }

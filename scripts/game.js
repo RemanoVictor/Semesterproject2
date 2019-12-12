@@ -5,7 +5,7 @@ document.getElementById('player2').innerHTML = `<img src="${sessionStorage.getIt
 //Board Game
 function rollDice() {
     // defining whos turn it is.
-    let playerTurn = {};    
+    let playerTurn = {};
     if (playerOne.turn === true) {
         playerTurn = playerOne;
     } else {
@@ -23,8 +23,8 @@ function rollDice() {
             document.getElementById('tile' + playerTurn.tileNum).innerHTML = `<img src="${playerOne.token}"/>`;
         }
     }
-//dice mechanics
-    let diceRoll = (Math.floor(Math.random() * 6) + 1);    
+    //dice mechanics
+    let diceRoll = (Math.floor(Math.random() * 6) + 1);
     if (diceRoll === 6) {
         document.getElementById('diceNumber').innerHTML = `
          <img src="media/textures/diceroll/${diceRoll}.png">`;
@@ -113,17 +113,16 @@ function rollDice() {
             title: playerTurn.title + ' is the winner! ',
         })
 
-        if(playerOne.turn === true){
+        if (playerOne.turn === true) {
             sessionStorage.setItem("winnerTitle", playerTurn.title);
             sessionStorage.setItem("winner", 'playerOne');
             window.location = "http://127.0.0.1:5500/winner.html";
-        }
-        else{
+        } else {
             sessionStorage.setItem("winnerTitle", playerTurn.title);
             sessionStorage.setItem("winner", 'playerTwo');
             window.location = "http://127.0.0.1:5500/winner.html";
         }
-        
+
     }
     //Switch players
     if (playerTurn === playerOne) {

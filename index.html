@@ -9,23 +9,16 @@
     <title>GOS Home</title>
 
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="icon" type="image/png" href="media/dragon2.png">
-
 </head>
 
 <body class="[ body ][ indexBody ][ animated fadeIn delay-0.7s ]">
-    <div class="[ container-fluid ]">
-        <div class="[ row ]">
-            <div class="[ navigation ]">
-                <ul>
-                    <li><a href="index.html" class="[ hvr-underline-from-center ]">Home</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="[ container ]">
         <div class="[ row ]">
             <div class="[ col-md-11 ]"></div>
@@ -33,25 +26,31 @@
                 <div id="muteIcon" class="[ musicIcon ]">
                     <img src="media/unmuted.png" onclick="silence()">
                 </div>
-                <audio id=backgroundMusic style="display: none;"
-                src="media/audio/G-OH-T.mp3" 
-                autoplay="true"
-                muted                         
-                >
+                <audio id=backgroundMusic style="display: none;" src="media/audio/G-OH-T.mp3" autoplay="true">
             </div>
         </div>
     </div>
 
     <div class="[ row ]">
         <div class="[ container-fluid ][ welcome ]">
-            <video autoplay muted loop class="[ backgroundVid ]">
+            <video autoplay loop class="[ backgroundVid ]">
                 <source src="media/videos/fire.mp4" type="video/mp4">
             </video>
 
             <div class="[ container ][ content ]">
                 <div class="[ row ]">
-                    <div class="[ col-md-12 ]">
-                        <h1>Game <span class="[ underline ]">o</span>f Sc<span class="[ underline ]">o</span>nes </h1>
+                    <div class="[ col-md-12 ][ container ]">
+                        <div class="[ row ]">
+                            <div class="[ col-xs-2 ]"></div>
+                            <div class="[ col-xs-6 ]">
+                                <h1>Game <span class="[ underline ]">o</span>f Sc<span class="[ underline ]">o</span>nes
+                                </h1>
+                            </div>
+                            <div class="[ col-xs-2 ]">
+                                <img src="media/scone_logo.svg" class="[ gameLogo ]">
+                            </div>
+                            <div class="[ col-xs-2 ]"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -63,7 +62,7 @@
                         <li>Finish first</li>
                     </ul>
                 </div>
-                <button class="[ content--button ]"><a href="characters.html" class="[ animated fadeIn delay-0.7s ][ hvr-underline-from-center ]">
+                <button class="[ content--button ][ animated pulse infinite ]"><a href="characters.html">
                         Next Page --></a></button>
             </div>
         </div>

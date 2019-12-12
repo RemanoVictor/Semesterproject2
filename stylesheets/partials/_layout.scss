@@ -3,17 +3,21 @@
     margin: 0;
     padding: 0;
 }
-button{
+
+button {
     background-color: transparent;
     border: none;
 }
+
 .body {
     background-color: black;
     font-family: josefin sans, sans-serif;
 }
+
 img {
     width: 100%;
 }
+
 .navigation {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -39,14 +43,17 @@ img {
         color: white;
     }
 }
+
 .hvr-underline-from-center:before {
     background: white !important;
 }
+
 .footer {
+    margin-top: 0%;
     text-align: center;
-    margin-top: 2%;
     color: white;
 }
-.swal2-content{    
+
+.swal2-content {
     font-size: 2em !important;
 }
