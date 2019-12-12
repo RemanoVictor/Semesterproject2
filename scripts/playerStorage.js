@@ -3,11 +3,12 @@ let count = 0;
 function saveChar(name) {
     closeModal();
     if (count === 0) {
+        document.getElementById('iconSelector').innerHTML="Player 2: click an icon to select a character ";
         sessionStorage.setItem("playerOne", name);
         sessionStorage.setItem("icon", '/media/tokens/' + name + '.svg');
         document.getElementById(name).setAttribute("class", "[ animated flipOutY ]");
         count++;
-    } else {
+    } else {        
         sessionStorage.setItem("playerTwo", name)
         sessionStorage.setItem("icon2", "/media/tokens/" + name + '.svg');
         if (count === 1) {
