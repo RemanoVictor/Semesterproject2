@@ -8,5 +8,5 @@ winnerDetails.innerHTML=`
 winnerToken.innerHTML+=`
 <img src="media/tokens/${sessionStorage.getItem("winnerTitle")}.svg">`;
 winnerDescription.innerHTML = `
-<p> And so, as the dust settled on the battlefield, one warrior stood victorious amongst the carnage. ${sessionStorage.getItem('winnerName')}, against all odds, has claimed The Delicious Scone.
+<p> And so, as the dust settled on the battlefield, one warrior stood victorious amongst the carnage. ${sessionStorage.getItem('winnerTitle')}, against all odds, has claimed The Delicious Scone.
 `;
