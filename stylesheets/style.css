@@ -304,8 +304,8 @@ img {
   height: 4.5em;
   width: 15%;
   margin: 5px;
-  padding-bottom: 2% 0;
-  border-radius: 20px;
+  padding: 0.5%;
+  border-radius: 5px;
 }
 
 .boardGame .tile p {
